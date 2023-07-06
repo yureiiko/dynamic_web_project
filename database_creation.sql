@@ -1,19 +1,19 @@
 create table admin (
     id_admin integer primary key,
-    username varchar(30),
-    passwd varchar(50)
+    username varchar(30) not null,
+    passwd varchar(50) not null
 );
 
 create table buyer (
     id_buyer integer primary key,
-    username varchar(30),
-    passwd varchar(50)
+    username varchar(30) not null,
+    passwd varchar(50) not null
 );
 
 create table seller (
     id_seller integer primary key,
-    username varchar(30),
-    passwd varchar(50)
+    username varchar(30) not null,
+    passwd varchar(50) not null
 );
 
 create table cart (
@@ -31,7 +31,7 @@ create table product (
 
 create table BIN (
     id_bin integer primary key,
-    price integer,
+    price integer not null,
     id_prod integer foreign key references product(id_prod)
 );
 
