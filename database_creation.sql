@@ -17,13 +17,15 @@ create table admin (
 create table buyer (
     id_buyer integer primary key,
     username varchar(30) not null,
-    passwd varchar(50) not null
+    passwd varchar(50) not null,
+    iban varchar(60) not null
 );
 
 create table seller (
     id_seller integer primary key,
     username varchar(30) not null,
-    passwd varchar(50) not null
+    passwd varchar(50) not null,
+    iban varchar(60) not null
 );
 
 create table cart (
