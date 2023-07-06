@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>YourMarket</title>
+		<script type="text/javascript">
+			<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript">
+			//var images = ["cauldron.jpg","pentacle.jpg","athame.jpg","wand.jpg"];
+			var dis = 0;
+			var animationSpeed = 3000;
+
+			$(document).ready(function(){
+				setInterval(function () {
+					$("#"+dis).fadeOut(500);
+					dis = (dis+1)%4;
+					$("#"+dis).delay(500).fadeIn(500);
+				}, animationSpeed);
+			});
+		</script>
+		</script>
+	</head>
+	<body>
+		<h1>Welcome At Yourmarket</h1>
+		<form action=""><input type="submit" value="Sign in"></form>
+		<form action=""><input type="submit" value="Create account"></form>
+	</body>
+</html>
