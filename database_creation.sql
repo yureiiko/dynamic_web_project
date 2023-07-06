@@ -1,3 +1,13 @@
+drop table admin;
+drop table buyer;
+drop table seller;
+drop table cart;
+drop table product;
+drop table BIN;
+drop table auction;
+drop table best_offer;
+drop table bid_chat;
+
 create table admin (
     id_admin integer primary key,
     username varchar(30) not null,
