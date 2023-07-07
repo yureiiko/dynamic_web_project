@@ -10,6 +10,10 @@
 
 ## Back
 - [ ] make the recap for signing up : 06/07
-- [ ] check when login : 07/07
+- [X] check when login : 07/07
 - [ ] all admin views on the database : 10/07
 - [ ] buyer and seller visualisation requests : 15/07
+
+## Style
+- [ ] Sign up
+- [ ] login
