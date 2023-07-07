@@ -3,7 +3,7 @@
 ## Front
 - [ ] homepage : 06/07
 - [ ] login : 07/07
-- [ ] sign up : 06/07
+- [X] sign up : 06/07
 - [ ] find images : 06/07
 - [ ] all admin pages : 10/07
 - [ ] all buyer and seller main pages : 15/07
