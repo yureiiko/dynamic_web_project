@@ -11,19 +11,6 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     		echo "Problem with the database, try again later";
 		}
 
-		/*
-		switch ($_POST['usrtype']) {
-			case 'buyer':
-				$id = mysqli_query($mysql,"select max(id_buyer)+1 from buyer");
-				break;
-			case 'seller':
-				$id = mysqli_query($mysql,"select max(id_seller)+1 from seller");
-				break;
-			default:
-				$id = 1;
-				break;
-		}*/
-
 		$query = "insert into ".$_POST['usrtype']."(username,passwd,iban) values('".$_POST['usrname']."','".$_POST['passwd']."','".$_POST['iban']."')";
 		if (mysqli_query($mysql, $query)) {
 			echo "done";
