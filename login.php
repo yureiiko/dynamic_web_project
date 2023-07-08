@@ -15,7 +15,7 @@
 					$password = "";
 					$database = "dynamic_web_project";
 					$port = 3308;
-					$conn = new mysqli("localhost", $usr, $password, $database, $port);
+					$conn = new mysqli("localhost", $usr, $password, $database);
 					if ($conn->connect_error) {
 					    echo "db error <br>";
 					}
@@ -24,6 +24,14 @@
 					mysqli_close($conn);
 					if ($res->num_rows==1) {
 						echo "Connected<br>";
+						switch ($_POST['usrtype']) {
+							case 'admin':
+								//session_start("admin");
+								header("Location: admin_main.php");
+								break;
+							default:
+								break;
+						}
 					} else {
 						echo "Error in login or password<br>";
 					}

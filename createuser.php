@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 		$password = "";
 		$database = "dynamic_web_project";
 		$port = 3308;
-		$mysql = new mysqli("localhost", $usr, $password, $database, $port);
+		$mysql = mysqli_connect("localhost", $usr, $password, $database);
 		if ($mysql->connect_error) {
     		echo "Problem with the database, try again later";
 		}

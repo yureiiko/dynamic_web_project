@@ -7,7 +7,9 @@
 	</head>
 	<body>
 		<h1>Welcome Admin</h1>
-		<span><h4>Products</h4></span><span><h4>Buyers</h4></span><span><h4>Sellers</h4></span>
-		
+		<span id="p"><h4>Products</h4></span><span id="b"><h4>Buyers</h4></span><span id="s"><h4>Sellers</h4></span>
+		<div id="0"><iframe src="admin_prod_frame.php" frameborder="0"></iframe></div>
+		<div id="1"><iframe src="admin_buyer_frame.php" frameborder="0"></iframe></div>
+		<div id="2"><iframe src="admin_seller_frame.php" frameborder="0"></iframe></div>
 	</body>
 </html>
