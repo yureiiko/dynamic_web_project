@@ -47,15 +47,16 @@ create table product (
 create table BIN (
     id_bin integer primary key auto_increment,
     price integer not null,
-    id_prod integer,
+    id_prod integer not null,
     foreign key (id_prod) references product(id_prod)
 );
 
 create table auction (
     id_auc integer primary key auto_increment,
-    max_price integer,
+    deadline date not null,
+    max_price integer not null,
     price integer,
-    id_prod integer,
+    id_prod integer not null,
     foreign key (id_prod) references product(id_prod),
     id_buyer integer,
     foreign key (id_buyer) references buyer(id_buyer) 
@@ -66,7 +67,7 @@ create table best_offer (
     buyer_price integer,
     seller_price integer,
     price integer,
-    id_prod integer,
+    id_prod integer not null,
     foreign key (id_prod) references product(id_prod),
     id_buyer integer,
     foreign key (id_buyer) references buyer(id_buyer) 
@@ -75,6 +76,12 @@ create table best_offer (
 create table bid_chat (
     id_offer integer primary key auto_increment,
     offer integer not null,
-    id_bo integer,
+    id_bo integer not null,
     foreign key (id_bo) references best_offer(id_bo)
 );
+
+insert into admin(username, passwd) values("admin", "admin");
+insert into buyer(username, passwd, iban) values("cam", "testcam", "1234");
+insert into seller(username, passwd, iban) values("sue", "testsue", "9876");
+insert into product(img_src, descrip, id_seller) values("src", "product for test", 1);
+insert into BIN(price, id_prod) values(15, 1);

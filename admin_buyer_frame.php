@@ -34,7 +34,6 @@
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
-        $port = 3308;
         $conn = new mysqli("localhost", $usr, $password, $database);
         if ($conn->connect_error) {
             echo "db error <br>";
