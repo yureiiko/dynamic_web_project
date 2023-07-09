@@ -4,6 +4,29 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin buyer frame</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            function checkDel(id) {
+                document.getElementById("del").innerHTML = "Do you really want to delete the user "+id+"<br><button onclick='noDel();'>No</button><button onclick='yesDel("+id+");'>Yes</button>";
+            }
+            function noDel() {
+                document.getElementById("del").innerHTML = "";
+            }
+            function yesDel(id) {
+                jQuery.ajax({
+                    type: "POST",
+                    url: "deleteBuyer.php",
+                    dataType: "json",
+                    data: {userid: id},
+                    complete:function(obj, textstatus) {
+                        if ("success" in obj) {
+                            document.getElementById("del").innerHTML = "";
+                            document.getElementById(id).innerHTML = "";
+                        }
+                    }
+                })
+            }
+        </script>
 	</head>
 	<body>
         <h4>Buyer Frame</h4>
@@ -21,8 +44,9 @@
 		mysqli_close($conn);
 
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div>".$row["id_buyer"]." <b>".$row["username"]."</b> ".$row["iban"]." <div>";
+            echo "<div id='".$row["id_buyer"]."'>".$row["id_buyer"]." <b>".$row["username"]."</b> ".$row["iban"]." <button onclick='checkDel(".$row["id_buyer"].");'>Delete</button><div>";
         }
         ?>
+        <span id="del"></span>
 	</body>
 </html>
