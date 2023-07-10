@@ -38,24 +38,24 @@ input[type="search"]{
 .banner{
 	width:100%;
 	height:100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url(Homepage_web.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url("img/Homepage_web.jpg");
 	background-size: cover;
 	background-position: center;
 	animation:slide 20s infinite;
 }
 @keyframes slide{
 	1%{
-		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url(Homepage_web.jpg);
+		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url("img/Homepage1_web.jpg");
 		background-size: cover;
 		background-position: center;
 	}
 	50%{
-		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url(Homepage4_web.jpg);
+		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url("img/Homepage2_web.jpg");
 		background-size: cover;
 		background-position: center;
 	}
 	100%{
-		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url(Homepage2_web.jpg);
+		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url("img/Homepage1_web.jpg");
 		background-size: cover;
 		background-position: center;
 	}
@@ -199,3 +199,4 @@ color: black;
 #mytable tr td a{
 text-decoration: none;
 color: darkgrey;
+}
