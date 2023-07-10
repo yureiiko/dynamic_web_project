@@ -1,0 +1,142 @@
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+	font-family: sans-serif;
+}
+
+section{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	width: 100%;
+	height:100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.75)), url(Homepage_web.jpg);
+	background-size:cover;
+	background-position:center;
+	animation: slide 20s infinite;
+}
+
+@keyframes slide{
+	1%{
+		background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url(Homepage_web.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+	50%{
+		background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url(Homepage1_web.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+	100%{
+		background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url(Homepage2_web.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+}
+.sign-box{
+	position:relative;
+	width:600px;
+	height:550px;
+	background: transparent;
+	border:2px solid rgba(255, 255, 255, .5);
+	border-radius: 20px;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	backdrop-filter: blur(15px);
+}
+.navbar{
+	position:absolute;
+	top:20px;
+	left:20px;
+
+}
+.logo{
+	width:150px;
+	cursor:pointer;
+	/*margin:0 auto;*/
+}
+.navbar ul li{
+	list-style:none;
+	display:inline-block;
+	margin:0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #eed9c4;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background:#eed9c4;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition:0.5s;
+}
+.navbar ul li:hover::after{
+	width:100%;
+}
+.content{
+	width:100%;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	text-align:center;
+	color:#eed9c4;
+	justify-content: center;
+	align-items: center;
+	min-height: 10vh;
+}
+
+.content hl{
+	font-size:70px;
+	margin-top: 80px;
+}
+.content p{
+	margin:20px auto;
+	font-weight:100;
+	line-height:25px;
+}
+
+button{
+	width:200px;
+	padding:15px 0;
+	text-align:center;
+	margin:20px 10px;
+	border-radius:25px;
+	font-weight:bold;
+	border:2px solid #eed9c4;
+	background:transparent;
+	color:#fff;
+	cursor: pointer;
+	position: relative;
+	overflow:hidden;
+}
+span{
+	background: #eed9c4;
+	height:100%;
+	width:0;
+	border-radius:25px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	z-index:-1;
+	transition:0.5s;
+}
+button:hover span{
+	width:100%; 
+}
+button:hover{
+	border:none;
+}
+h1{
+	font-size: 2em;
+	color: #eed9c4;
+	text-align: center;
+}
