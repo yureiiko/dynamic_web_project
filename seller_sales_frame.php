@@ -6,22 +6,31 @@
 		<title>Grandeur Estates & Cars : Admin seller frame</title>
 	</head>
 	<body>
+        <?php
+		if (!isset($_COOKIE["seller"])) {
+			header("Location: login.php");
+		}
+        echo("<br>".$_COOKIE["seller"]."<br>");
+		?>
         <h4>Sales</h4>
 		<?php
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
-        $port = 3308;
         $conn = new mysqli("localhost", $usr, $password, $database);
         if ($conn->connect_error) {
-            echo "db error <br>";
+            die
         }
-        $query = "select p.img_src, p.descrip, b.username from product p, buyer b, sales s where p.id_product=s.id_product and p.id_seller='".$_COOKIE["seller"]."' and p.id_prod=s.id_prod";
+        $query = "select * from sales";
 		$res = mysqli_query($conn, $query);
 		mysqli_close($conn);
-
-        while ($row = mysqli_fetch_array($res)) {
-            echo "<div>".$row["id_seller"]." <img src='".$row["img_src"]."'> ".$row["descrip"]." Sold to ".$row["username"]."<div>";
+        //echo "<br>".$res."<br>";
+        if (!$res===false) {
+            while ($row = mysqli_fetch_array($res)) {
+                echo "<div>".$row["id_seller"]." <img src='".$row["img_src"]."'> ".$row["descrip"]." Sold to ".$row["username"]."<div>";
+            }
+        } else {
+            echo "TEST error"
         }
         ?>
         <span id="del"></span>
