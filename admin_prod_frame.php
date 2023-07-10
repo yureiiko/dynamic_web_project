@@ -8,6 +8,10 @@
 			.prodtype {
 				display: none;
 			}
+			.der {
+				display: grid;
+				grid-template-columns: auto auto auto;
+			}
 		</style>
 		<script type="text/javascript">
 			function revFrame(id) {
@@ -23,7 +27,7 @@
 		</script>
 	</head>
 	<body>
-		<span id="bin" onclick="revFrame(10);"><h4>Buy It Now</h4></span><span id="bo" onclick="revFrame(11);"><h4>Best Offer</h4></span><span id="auc" onclick="revFrame(12);"><h4>Auction</h4></span>
+		<div class="der"><span id="bin" onclick="revFrame(10);"><h4>Buy It Now</h4></span><span id="bo" onclick="revFrame(11);"><h4>Best Offer</h4></span><span id="auc" onclick="revFrame(12);"><h4>Auction</h4></span></div>
         <div id="10" class="prodtype"><iframe src="admin_prod_bin.php" frameborder="0"></iframe></div>
 		<div id="11" class="prodtype"><iframe src="admin_prod_bo.php" frameborder="0"></iframe></div>
 		<div id="12" class="prodtype"><iframe src="admin_prod_auc.php" frameborder="0"></iframe></div>

@@ -19,15 +19,19 @@
 					if ($conn->connect_error) {
 					    echo "db error <br>";
 					}
-					$query = "select * from ".$_POST['usrtype']." where username='".$_POST['usrname']."' and passwd='".$_POST['passwd']."'";
+					$query = "select id_".$_POST['usrtype']." from ".$_POST['usrtype']." where username='".$_POST['usrname']."' and passwd='".$_POST['passwd']."'";
 					$res = mysqli_query($conn, $query);
 					mysqli_close($conn);
 					if ($res->num_rows==1) {
 						echo "Connected<br>";
+						$row = mysqli_fetch_array($res);
 						switch ($_POST['usrtype']) {
 							case 'admin':
-								//session_start("admin");
 								header("Location: admin_main.php");
+								break;
+							case 'seller':
+								setcookie("seller", $row['id_seller']);
+								header("Location: seller_main.php");
 								break;
 							default:
 								break;

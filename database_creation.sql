@@ -3,6 +3,7 @@ drop table buyer;
 drop table seller;
 drop table cart;
 drop table product;
+drop table sales;
 drop table BIN;
 drop table auction;
 drop table best_offer;
@@ -45,7 +46,8 @@ create table product (
     foreign key (id_cart) references cart(id_cart)
 );
 
-create table sells (
+create table sales (
+    sale_date date not null,
     id_prod integer not null,
     foreign key (id_prod) references product(id_prod),
     id_buyer integer not null,
@@ -62,7 +64,7 @@ create table BIN (
 create table auction (
     id_auc integer primary key auto_increment,
     deadline date not null,
-    max_price integer not null,
+    max_price integer,
     price integer,
     id_prod integer not null,
     foreign key (id_prod) references product(id_prod),
