@@ -1,12 +1,12 @@
 <?php
 if ($_SERVER['REQUEST_METHOD']=="POST") {
 	if (isset($_POST['usrtype']) && isset($_POST['usrname']) && isset($_POST['iban']) && isset($_POST['passwd'])) {
-		//test
+		
 		$usr = "root";
 		$password = "";
 		$database = "dynamic_web_project";
 		$port = 3308;
-		$mysql = new mysqli("localhost", $usr, $password, $database, $port);
+		$mysql = mysqli_connect("localhost", $usr, $password, $database);
 		if ($mysql->connect_error) {
     		echo "Problem with the database, try again later";
 		}
