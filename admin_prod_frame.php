@@ -27,6 +27,11 @@
 		</script>
 	</head>
 	<body>
+		<?php
+		if (!isset($_COOKIE["admin"])) {
+			header("Location: login.php");
+		}
+		?>
 		<div class="der"><span id="bin" onclick="revFrame(10);"><h4>Buy It Now</h4></span><span id="bo" onclick="revFrame(11);"><h4>Best Offer</h4></span><span id="auc" onclick="revFrame(12);"><h4>Auction</h4></span></div>
         <div id="10" class="prodtype"><iframe src="admin_prod_bin.php" frameborder="0"></iframe></div>
 		<div id="11" class="prodtype"><iframe src="admin_prod_bo.php" frameborder="0"></iframe></div>

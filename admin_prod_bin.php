@@ -29,6 +29,11 @@
         </script>
 	</head>
 	<body>
+        <?php
+		if (!isset($_COOKIE["admin"])) {
+			header("Location: login.php");
+		}
+		?>
         <h4>Product buy it now</h4>
 		<?php
         $usr = "root";

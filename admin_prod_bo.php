@@ -6,6 +6,11 @@
 		<title>Grandeur Estates & Cars : Admin product buy it now</title>
 	</head>
 	<body>
+        <?php
+		if (!isset($_COOKIE["admin"])) {
+			header("Location: login.php");
+		}
+		?>
         <h4>Product best offer</h4>
 		<?php
         $usr = "root";
