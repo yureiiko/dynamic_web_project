@@ -8,7 +8,9 @@ if (isset($_POST["userid"])) {
     if ($conn->connect_error) {
         echo "db error <br>";
     }
-    $query = "delete from buyer where id_buyer=".$_POST["userid"];
+    $query = "delete from seller where id_seller=".$_POST["userid"];
+    $res = mysqli_query($conn, $query);
+    $query = "delete from product where id_seller=".$_POST["userid"];
     $res = mysqli_query($conn, $query);
     mysqli_close($conn);
     echo json_encode("success");

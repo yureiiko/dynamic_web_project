@@ -17,6 +17,7 @@ if (isset($_POST["prodid"]) && (isset($_POST["auc"]) || isset($_POST["bin"]))) {
         $query = "delete from auction where id_prod=".$_POST["prodid"];
         $res = mysqli_query($conn, $query);
     }
+    mysqli_close($conn);
     echo json_encode("success");
 }
 ?>
