@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD']=="POST") {
 	if (isset($_POST['usrtype']) && isset($_POST['usrname']) && isset($_POST['iban']) && isset($_POST['passwd'])) {
-		
+		//test
 		$usr = "root";
 		$password = "";
 		$database = "dynamic_web_project";
