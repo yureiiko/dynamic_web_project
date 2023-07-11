@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin product buy it now</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/prodDelete_check.js"></script>
 	</head>
 	<body>
         <?php
@@ -26,7 +28,7 @@
 		mysqli_close($conn);
 
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <div>";
+            echo "<div><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].", 3)'>Delete</button><div>";
         }
         ?>
 	</body>

@@ -27,6 +27,7 @@
 						$row = mysqli_fetch_array($res);
 						switch ($_POST['usrtype']) {
 							case 'admin':
+								setcookie("admin", $row['id_admin']);
 								header("Location: admin_main.php");
 								break;
 							case 'seller':
