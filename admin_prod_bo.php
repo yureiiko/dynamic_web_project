@@ -28,8 +28,9 @@
 		mysqli_close($conn);
 
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].", 3)'>Delete</button><div>";
+            echo "<div id=".$row["id_prod"]."><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].",3)'>Delete</button></div>";
         }
         ?>
+        <span id="del"></span>
 	</body>
 </html>

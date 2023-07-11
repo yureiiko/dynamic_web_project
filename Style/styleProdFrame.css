@@ -1,0 +1,7 @@
+.prodtype {
+    display: none;
+}
+.der {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
