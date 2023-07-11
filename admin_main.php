@@ -4,15 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin Main Page</title>
-		<style type="text/css">
-			.frame {
-				display: none;
-			}
-			.der {
-				display: grid;
-				grid-template-columns: auto auto auto; 
-			}
-		</style>
+		<link rel="stylesheet" href="Style/styleUserMain.css">
 		<script type="text/javascript" src="js/frameRev.js"></script>
 	</head>
 	<body>

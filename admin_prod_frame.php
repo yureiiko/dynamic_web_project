@@ -4,15 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin product frame</title>
-		<style type="text/css">
-			.prodtype {
-				display: none;
-			}
-			.der {
-				display: grid;
-				grid-template-columns: auto auto auto;
-			}
-		</style>
+		<link rel="stylesheet" href="Style/styleProdFrame.css">
 		<script type="text/javascript" src="js/frameRev.js"></script>
 	</head>
 	<body>

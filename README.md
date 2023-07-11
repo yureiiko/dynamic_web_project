@@ -21,7 +21,10 @@
 - [X] admin can delete seller in the database : 10/07
 - [X] make the login cookie check : 11/07
 - [X] seller sales visualisation : 15/07
-- [ ] seller products BIN visualisation : 15/07
+- [X] seller products BIN visualisation : 15/07
 - [ ] seller products auction visualisation : 15/07
 - [ ] seller products Best Offer visualisation : 15/07
+- [ ] seller products BIN deletion : 16/07
+- [ ] seller products auction deletion : 16/07
+- [ ] seller products Best Offer deletion : 16/07
 - [ ] seller add product : 15/07
