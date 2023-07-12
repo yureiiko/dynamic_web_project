@@ -24,7 +24,7 @@
 		$res = mysqli_query($conn, $query);
 		mysqli_close($conn);
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div>".$row["id_seller"]." <img src='".$row["img_src"]."'> ".$row["descrip"]." Sold to ".$row["username"]."<div>";
+            echo "<div> <img src='".$row["img_src"]."'> ".$row["descrip"]." Sold to ".$row["username"]."<div>";
         }
         ?>
         <span id="del"></span>

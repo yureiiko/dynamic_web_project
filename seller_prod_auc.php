@@ -13,7 +13,7 @@
 			header("Location: login.php");
 		}
 		?>
-        <h4>Product Buy it now</h4>
+        <h4>Product Auction</h4>
 		<?php
         $usr = "root";
         $password = "";
@@ -22,11 +22,15 @@
         if ($conn->connect_error) {
             echo "db error <br>";
         }
-        $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, bin b where p.id_prod=b.id_prod and p.id_prod not in(select id_prod from sales) and p.id_seller in (select id_seller from seller) and p.id_seller=".$_COOKIE["seller"];
+        $query = "select p.id_prod, p.img_src, p.descrip, a.price from product p, auction a where p.id_prod=a.id_prod and p.id_prod not in(select id_prod from sales) and p.id_seller in (select id_seller from seller) and p.id_seller=".$_COOKIE["seller"];
 		$res = mysqli_query($conn, $query);
 		mysqli_close($conn);
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div id='".$row["id_prod"]."'><img src='".$row["img_src"]."'> ".$row["id_prod"]." <b>".$row["descrip"]."</b> £".$row["price"]." <button onclick='checkDel(".$row["id_prod"].",1)'>Delete</button><div>";
+            $price = $row["price"];
+            if ($price=="") {
+                $price="(No proposition)";
+            }
+            echo "<div id='".$row["id_prod"]."'><img src='".$row["img_src"]."'> ".$row["id_prod"]." <b>".$row["descrip"]."</b> £".$price." <button onclick='checkDel(".$row["id_prod"].",2)'>Delete</button><div>";
         }
         ?>
 
