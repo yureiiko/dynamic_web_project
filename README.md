@@ -27,4 +27,5 @@
 - [X] seller products BIN deletion : 12/07
 - [X] seller products auction deletion : 12/07
 - [X] seller products Best Offer deletion : 12/07
+- [X] admin and seller log out : 12/07
 - [ ] seller add product : 13/07
