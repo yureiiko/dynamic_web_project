@@ -14,7 +14,7 @@
         }
         ?>
         <h1>You will now add Specifications about the product</h1>
-        <form action="" method="POST">
+        <form action="addProd.php" method="POST">
             <label for="prod_type">What is the type of your product : </label>
             <select name="prod_type" id="prod_type">
                 <option value="car">Car</option>
@@ -38,14 +38,15 @@
                         echo "<input type='hidden' name='sale' value='best_offer'>";
                         break;
                     case 'auc':
+                        echo "<input type='hidden' name='price' value=0>";
                         echo "<input type='hidden' name='sale' value='auction'>";
                         break;
                     default:
-                        header("Location: seller_main.php");
                         break;
                 }
             } else {
-                header("Location: seller_main.php");
+                echo "<br>no sale post<br>";
+                //header("Location: seller_addProd_frame.php");
             }
             ?>
             <input type="submit" value="Add Product">
