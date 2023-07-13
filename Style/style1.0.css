@@ -134,11 +134,85 @@ input[type="search"]{
 	padding: 0;
 }
 
+a.test {
+	border: 2px solid rgb(128, 0, 128);
+	width: 200px;
+	border-radius: 25px;
+	transition:0.5s;
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+  }
+  
+  a.test:hover {
+	background-color: purple;
+	color: white;
+  }
+  
+
+
+section{
+	width:80%;
+	margin: 80px auto;
+	text-align: center;
+}
+.title{
+	text-align: center;
+	font-size: 4vmin;
+	color:#785d4d
+
+}
+
+.buy{
+	width:100%;
+	height:100vh;
+
+	background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.25)), url('./img/buyHouse.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display:flex;
+	align-items:left;
+}
+
+.buy-content{
+	width:60%;
+	padding: 120px;
+	color:#785d4d;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.buy-content h1{
+	font-size:4vmin;
+	margin: 0;
+	position:absolute;
+	top:995px;
+	left: 30px;
+}
+
+.buy-content p{
+	color: rgb(0, 0, 0);
+	margin:0;
+	position:absolute;
+	top:1050px;
+	left:20px;
+}
+
+.buy-content .ctn{
+	margin:50;
+	position:absolute;
+	top:1095px;
+	left:30px;
+}
+
 button{
 	width:200px;
 	padding:15px 0;
 	text-align:center;
-	margin:20px 10px;
+	margin:30px 0;
 	border-radius:25px;
 	font-weight:bold;
 	border:2px solid #eed9c4;
@@ -147,6 +221,8 @@ button{
 	cursor: pointer;
 	position: relative;
 	overflow:hidden;
+	z-index:1;
+
 }
 span{
 	background: #eed9c4;
@@ -156,7 +232,7 @@ span{
 	position:absolute;
 	left:0;
 	bottom:0;
-	z-index:-1;
+	z-index:2;
 	transition:0.5s;
 }
 button:hover span{
@@ -165,6 +241,49 @@ button:hover span{
 button:hover{
 	border:none;
 }
+.sell{
+	width:100%;
+	height:100vh;
+	background-image:url('./img/sellHouse.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display:flex;
+	align-items:left;
+}
+
+.sell-content{
+	width:60%;
+	padding: 50px;
+	color:#785d4d;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.sell-content h1{
+	font-size:4vmin;
+	margin: 0;
+	position:absolute;
+	top:1800px;
+	left: 30px;
+}
+
+.sell-content p{
+	color: rgb(0, 0, 0);
+	margin:0;
+	position:absolute;
+	top:1855px;
+	left:30px;
+}
+
+.sell-content .ctn{
+	margin:0;
+	position:absolute;
+	top:1900px;
+	left:30px;
+}
+/*
 h2{
 background: #eed9c4;
 text-align: center;
@@ -173,15 +292,19 @@ height: 50px;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 color: black;
 font-family: cusrsive, Times New Roman;
-}
+}*/
 table {
       border-collapse: separate;
       border-spacing: 10px; /* Ajoute un espace de 10 pixels entre les colonnes */
+	  background-color: #785d4d;
+	  text-align: left;
+	  width: 1465px;
     }
 
 td {
   font-family: times new roman;
   position: relative;
+  
 
   justify-content: center;
 }
@@ -194,9 +317,9 @@ td {
 }
 #mytable tr tH a{
 text-decoration: none;
-color: black;
+color: rgb(255, 253, 253);
 }
 #mytable tr td a{
 text-decoration: none;
-color: darkgrey;
+color: rgb(5, 5, 5);
 }

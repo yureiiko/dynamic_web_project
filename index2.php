@@ -7,7 +7,7 @@
 				<h1>Grandeur Estates & Cars</h1>
 				<p><b>Unleash Your Luxe Lifestyle</b></p>
 				<div>
-					<a href="su.html"><button type="button"><span></span>Sign up</button></a>
+					<a href="su.html" class=test>Sign up</a>
 					<a href="LI.html"><button type="button"><span></span>Log in</button></a>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 			<div>
 				<a href="buyer.html"><button type="button"><span></span>Start</button></a>
 			</div>-->
-			<a href="buyer.html"><button type="button"><span></span>Start</button></a>
+			<a href="buyer.html" class=test>Start</a>
 		</div>
 	</center>
 </section>

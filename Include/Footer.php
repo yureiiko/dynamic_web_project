@@ -3,10 +3,10 @@
 	<br>
 	<table id="mytable">
 		<tr>
-			<th><a href="Buy.html">Buy</a></th>
-			<th><a href="Seller.html">Sell</a></th>
-			<th><a href="Community.html">Community</a></th>
-			<th><a href="aboutus.html">About us</a></th>
+			<th><b><a href="Buy.html">Buy</a></b></th>
+			<th><b><a href="Seller.html">Sell</a></b></th>
+			<th><b><a href="Community.html">Community</a></b></th>
+			<th><b><a href="aboutus.html">About us</a></b></th>
 		</tr>
 		<tr>
 			<td><a href="fff">Buy it now</a></td>
