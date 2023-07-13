@@ -23,12 +23,12 @@
         if ($conn->connect_error) {
             echo "db error <br>";
         }
-        $query = "select p.id_prod, p.img_src, p.descrip, a.max_price, s.username from product p, auction a, seller s where p.id_prod=a.id_prod and p.id_seller=s.id_seller and p.id_prod not in(select id_prod from sales) and p.id_seller in (select id_seller from seller)";
+        $query = "select p.id_prod, p.img_src, a.deadline, p.descrip, a.max_price, s.username from product p, auction a, seller s where p.id_prod=a.id_prod and p.id_seller=s.id_seller and p.id_prod not in(select id_prod from sales) and p.id_seller in (select id_seller from seller)";
 		$res = mysqli_query($conn, $query);
 		mysqli_close($conn);
 
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div id='".$row["id_prod"]."'><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["max_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].",2)'>Delete</button><div>";
+            echo "<div id='".$row["id_prod"]."'><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> deadline : ".$row["deadline"]." £".$row["max_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].",2)'>Delete</button><div>";
         }
         ?>
         <span id="del"></span>

@@ -1,10 +1,6 @@
 <?php
 if (isset($_COOKIE["seller"])) {
     if (isset($_POST["prod_type"]) && isset($_FILES["prod_img"]) && isset($_POST["descrip"]) && isset($_POST["sale"]) && isset($_POST["price"])) {
-        $maxid = getMaxProdId()+1;
-        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].$maxid;
-        $tmpFile = $_FILES["prod_img"]["tmp_name"];
-        move_uploaded_file($tmpFile, $uploadfile);
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
@@ -12,7 +8,16 @@ if (isset($_COOKIE["seller"])) {
         if ($conn->connect_error) {
             echo "db error <br>";
         }
-        $query1 = "insert into product(img_src, descrip, type_prod, id_seller) values('".$uploadfile."','".$_POST["descrip"]."','".$_POST["prod_type"]."','".$_COOKIE["seller"]."')";
+        $query1 = "insert into product(descrip, type_prod, id_seller) values('".$_POST["descrip"]."','".$_POST["prod_type"]."','".$_COOKIE["seller"]."')";
+        if (!mysqli_query($conn, $query1)) {
+            echo "database problem";
+        }
+        $maxid = getNewProdId();
+        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].$maxid;
+        $tmpFile = $_FILES["prod_img"]["tmp_name"];
+        move_uploaded_file($tmpFile, $uploadfile);
+        $query_file = "update product set img_src='".$uploadfile."' where id_prod=".$maxid;
+        mysqli_query($conn, $query_file);
         switch ($_POST["sale"]) {
             case 'BIN':
                 $query2 = "insert into BIN(price, id_prod) values(".$_POST["price"].",".$maxid.")";
@@ -21,15 +26,13 @@ if (isset($_COOKIE["seller"])) {
                 $query2 = "insert into best_offer(seller_price, id_prod) values(".$_POST["price"].",".$maxid.")";
                 break;
             case 'auction':
-                $query2 = "insert into auction(deadline, id_prod) values('".(date("Y-m-d")+30)."',".$maxid.")";
+                $query2 = "insert into auction(deadline, id_prod) values('".date("Y")."-".(date("m")+1)."-".date("d")."',".$maxid.")";
                 break;
             default:
                 $query2 = "";
                 break;
         }
-        if (mysqli_query($conn, $query1) && mysqli_query($conn, $query2)) {
-            echo "You add the product";
-            sleep(2);
+        if (mysqli_query($conn, $query2)) {
             header("Location: seller_addProd_frame.php");
         } else {
             echo "database problem";
@@ -42,7 +45,7 @@ if (isset($_COOKIE["seller"])) {
 }
 
 //Return the max id of product in the database
-function getMaxProdId() {
+function getNewProdId() {
     $usr = "root";
     $password = "";
     $database = "dynamic_web_project";
