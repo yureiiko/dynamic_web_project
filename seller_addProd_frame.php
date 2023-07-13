@@ -19,7 +19,7 @@
             <select name="saling" id="saling">
                 <option value="bin">Buy it now (you put the price and it not change)</option>
                 <option value="bo">Best Offer (you can negotiate the price with the customer)</option>
-                <option value="auc">Auction (auction take place between customers)</option>
+                <option value="auc">Auction (auction take place between customers for 1 month)</option>
             </select>
             <br><br>
             <input type="submit" value="Add product specifications">

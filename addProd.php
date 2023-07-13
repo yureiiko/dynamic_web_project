@@ -1,8 +1,8 @@
 <?php
 if (isset($_COOKIE["seller"])) {
     if (isset($_POST["prod_type"]) && isset($_FILES["prod_img"]) && isset($_POST["descrip"]) && isset($_POST["sale"]) && isset($_POST["price"])) {
-        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].getMaxProdId()+1;
-        //echo "<br>".$uploadfile."<br>";
+        $maxid = getMaxProdId()+1;
+        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].$maxid;
         $tmpFile = $_FILES["prod_img"]["tmp_name"];
         move_uploaded_file($tmpFile, $uploadfile);
         $usr = "root";
@@ -12,7 +12,25 @@ if (isset($_COOKIE["seller"])) {
         if ($conn->connect_error) {
             echo "db error <br>";
         }
-        $query = "insert into product(img_src, descrip, type_prod, id_seller) values('".$uploadfile."','".$_POST["descrip"]."','".$_POST["prod_type"];
+        $query1 = "insert into product(img_src, descrip, type_prod, id_seller) values('".$uploadfile."','".$_POST["descrip"]."','".$_POST["prod_type"]."','".$_COOKIE["seller"]."')";
+        switch ($_POST["sale"]) {
+            case 'BIN':
+                $query2 = "insert into BIN(price, id_prod) values(".$_POST["price"].",".$maxid.")";
+                break;
+            case 'best_offer':
+                $query2 = "insert into best_offer(seller_price, id_prod) values(".$_POST["price"].",".$maxid.")";
+                break;
+            case 'auction':
+                $query2 = "insert into auction(deadline, id_prod) values("..",".$maxid.")";
+                break;
+            default:
+                break;
+        }
+        if (mysqli_query($conn, $query)) {
+            echo "You add the product";
+            sleep(2);
+            header("Location: seller_addProd_frame.php");
+        }
     } else {
         header("Location: seller_addProd_frame.php");
     }
