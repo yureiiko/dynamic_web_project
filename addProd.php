@@ -21,15 +21,18 @@ if (isset($_COOKIE["seller"])) {
                 $query2 = "insert into best_offer(seller_price, id_prod) values(".$_POST["price"].",".$maxid.")";
                 break;
             case 'auction':
-                $query2 = "insert into auction(deadline, id_prod) values("..",".$maxid.")";
+                $query2 = "insert into auction(deadline, id_prod) values('".(date("Y-m-d")+30)."',".$maxid.")";
                 break;
             default:
+                $query2 = "";
                 break;
         }
-        if (mysqli_query($conn, $query)) {
+        if (mysqli_query($conn, $query1) && mysqli_query($conn, $query2)) {
             echo "You add the product";
             sleep(2);
             header("Location: seller_addProd_frame.php");
+        } else {
+            echo "database problem";
         }
     } else {
         header("Location: seller_addProd_frame.php");
