@@ -14,7 +14,7 @@
         }
         ?>
         <h1>You will now add Specifications about the product</h1>
-        <form action="addProd.php" method="POST">
+        <form action="addProd.php" method="POST" enctype="multipart/form-data">
             <label for="prod_type">What is the type of your product : </label>
             <select name="prod_type" id="prod_type">
                 <option value="car">Car</option>
