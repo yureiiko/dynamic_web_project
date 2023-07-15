@@ -92,9 +92,9 @@ create table bid_chat (
 insert into admin(username, passwd) values("admin", "admin");
 insert into buyer(username, passwd, iban) values("cam", "testcam", "1234");
 insert into seller(username, passwd, iban) values("sue", "testsue", "9876");
-insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "bin for test", "car", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "bin for test", "castle", 1);
 insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "auction for test", "house", 1);
-insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "best offer for test", "castle", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "best offer for test", "car", 1);
 insert into BIN(price, id_prod) values(15, 1);
 insert into auction(deadline, id_prod) values("2023-08-23", 2);
 insert into best_offer(seller_price, id_prod) values(100, 3);
