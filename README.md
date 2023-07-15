@@ -29,8 +29,8 @@
 - [X] seller products Best Offer deletion : 12/07
 - [X] admin and seller log out : 12/07
 - [X] seller add product : 13/07
-- [ ] products.php
-- [ ] Cars.php
-- [ ] Cars.css
-- [ ] Cars.js
-- [ ] products.css
+- [ ] products.php : 17/07
+- [ ] Cars.php : 17/07
+- [ ] Cars.css : 17/07
+- [ ] Cars.js : 17/07
+- [ ] products.css : 17/07

@@ -19,7 +19,8 @@
             <select name="prod_type" id="prod_type">
                 <option value="car">Car</option>
                 <option value="castle">Castle</option>
-                <option value="estate">Estate</option>
+                <option value="mansion">Mansion</option>
+                <option value="villa">Villa</option>
             </select>
             <br><br>
             <label for="prod_img">Upload an image of you product : </label><input type="file" name="prod_img" accept="image/png, image/jpeg">
