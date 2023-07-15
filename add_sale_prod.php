@@ -21,6 +21,11 @@
                 <option value="castle">Castle</option>
                 <option value="mansion">Mansion</option>
                 <option value="villa">Villa</option>
+                <option value="apartment">Apartment</option>
+                <option value="island">Island</option>
+                <option value="penthouse">Penthouse</option>
+                <option value="chalet">Chalet</option>
+                <option value="bungalow">Bungalow</option>
             </select>
             <br><br>
             <label for="prod_img">Upload an image of you product : </label><input type="file" name="prod_img" accept="image/png, image/jpeg">
