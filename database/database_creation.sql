@@ -38,7 +38,7 @@ create table cart (
 
 create table product (
     id_prod integer primary key auto_increment,
-    img_src varchar(30) not null,
+    img_src varchar(60) not null,
     descrip varchar(60) not null,
     type_prod varchar(30) not null,
     id_seller integer not null,
