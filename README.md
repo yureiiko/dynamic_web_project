@@ -31,6 +31,4 @@
 - [X] seller add product : 13/07
 - [X] products.php : 17/07
 - [ ] Cars.php : 17/07
-- [ ] Cars.css : 17/07
-- [ ] Cars.js : 17/07
-- [ ] products.css : 17/07
+- [ ] buyer login : 17/07
