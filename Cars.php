@@ -47,12 +47,17 @@
   </ul>
 </nav>
 <br><br><br><br><br><br>
+<?php
+if (!isset($_COOKIE["buyer"])) {
+  header("Location: login.php");
+}
+$usr = "root";
+$password = "";
+$database = "dynamic_web_project";
+$conn = new mysqli("localhost", $usr, $password, $database);
+?>
   <center><h2><a name="SUV">SUV</h2></center><br>
   <?php
-  $usr = "root";
-  $password = "";
-  $database = "dynamic_web_project";
-  $conn = new mysqli("localhost", $usr, $password, $database);
   $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='suv'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {

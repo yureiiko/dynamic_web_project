@@ -34,6 +34,10 @@
 								setcookie("seller", $row['id_seller']);
 								header("Location: seller_main.php");
 								break;
+							case 'buyer':
+								setcookie("buyer", $row['id_buyer']);
+								header("Location: products.php");
+								break;
 							default:
 								break;
 						}
