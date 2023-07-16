@@ -68,7 +68,7 @@ nav ul  li ul li a:hover{
  *{
 	margin:0px;
 	padding:0px;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 }
 body{
 	width:100%;
@@ -149,5 +149,3 @@ nav ul ul li {
   width: 100%;
   display: block;
 }
-
-

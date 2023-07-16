@@ -1,8 +1,19 @@
-<?php
-	include('./include/Header.php');
-	include('./include/Navigation.php');
-?>
-			
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="shortcut icon" type="x-icon" href="Style/img/GEC.png">
+		<title>GEC</title>
+		<link rel="stylesheet" type="text/css" href="Style/style1.0.css">
+	</head>
+	<body>
+	<div class="banner">
+
+	<?php
+		include('./include/Navigation.php');
+	?>
+	</div>
+
 			<div class="content">
 				<h1>Grandeur Estates & Cars</h1>
 				<p><b>Unleash Your Luxe Lifestyle</b></p>
@@ -11,13 +22,12 @@
 					<a href="LI.html"><button type="button"><span></span>Log in</button></a>
 				</div>
 			</div>
-		</div>
 
-
-<section>
+		
+<section >
 	<div class="title">
 		<h1>Seize the opportunity by buying and selling</h1>
-		<div class="line"></div>
+	</div>
 </section>
 
 <section class="buy">
@@ -47,3 +57,6 @@
 <?php
 	include('./include/Footer.php');
 ?>
+
+</body>
+</html>

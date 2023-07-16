@@ -7,9 +7,14 @@ header {
 	height: 80px;
 	margin : 10px
 }
-nav {
+/* nav {
 	list-style-type: none;
 	display: inline-block;
+	width: 100%;
+	background-color: #eed9c4;
+	height: 25px;
+	line-height: 25px;
+	padding:0px 50px;
 }
 nav ul li a {
 	letter-spacing: 0.1rem;
@@ -26,8 +31,7 @@ nav ul li a:hover {
 }
 .menu li a {
 	text-decoration: none;
-
-}
+} */
 form {
 	padding: 35px;
 	text-align : right;
@@ -42,7 +46,7 @@ input[type="search"]{
 	background-size: cover;
 	background-position: center;
 	animation:slide 20s infinite;
-}
+} 
 @keyframes slide{
 	1%{
 		background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.75)), url("img/Homepage1_web.jpg");
@@ -60,7 +64,7 @@ input[type="search"]{
 		background-position: center;
 	}
 }
-.navbar{
+/* .navbar{
 	width:85%;
 	margin:auto;
 	padding:35px 0;
@@ -77,7 +81,7 @@ input[type="search"]{
 	display:inline-block;
 	margin:0 20px;
 	position: relative;
-}
+}	
 .navbar ul li a{
 	text-decoration: none;
 	color: #fff;
@@ -95,7 +99,24 @@ input[type="search"]{
 }
 .navbar ul li:hover::after{
 	width:100%;
+} 
+
+.navbar {
+  display: flex;
+  align-items: center;
 }
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+*/
 .content{
 	width:100%;
 	position: absolute;
@@ -114,45 +135,14 @@ input[type="search"]{
 	font-weight:100;
 	line-height:25px;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline-block;
-  margin-right: 10px;
-}
 .content2{
 	margin: 0;
 	padding: 0;
 }
 
-a.test {
-	border: 2px solid rgb(128, 0, 128);
-	width: 200px;
-	border-radius: 25px;
-	transition:0.5s;
-	display: inline-block;
-	padding: 10px;
-	text-decoration: none;
-	color: white;
-  }
-  
-  a.test:hover {
-	background-color: purple;
-	color: white;
-  }
   
 
-
-section{
+ section{
 	width:80%;
 	margin: 80px auto;
 	text-align: center;
@@ -160,25 +150,24 @@ section{
 .title{
 	text-align: center;
 	font-size: 4vmin;
-	color:#785d4d
+	color:#785d4d;
 
 }
 
 .buy{
 	width:100%;
 	height:100vh;
-
 	background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0, 0, 0,0.25)), url('./img/buyHouse.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display:flex;
-	align-items:left;
+	align-items:left;	
 }
 
 .buy-content{
-	width:60%;
-	padding: 120px;
+	width:100%;
+	padding: 50px;
 	color:#785d4d;
 	display: flex;
 	align-items: flex-start;
@@ -188,24 +177,24 @@ section{
 .buy-content h1{
 	font-size:4vmin;
 	margin: 0;
-	position:absolute;
-	top:995px;
-	left: 30px;
+	/* position:absolute; */
+	/* top:995px;
+	left: 30px; */
 }
 
 .buy-content p{
 	color: rgb(0, 0, 0);
 	margin:0;
-	position:absolute;
-	top:1050px;
-	left:20px;
+	/* position:absolute; */
+	/* top:1050px;
+	left:20px; */
 }
 
 .buy-content .ctn{
 	margin:50;
-	position:absolute;
-	top:1095px;
-	left:30px;
+	/* position:absolute; */
+	/* top:1095px;
+	left:30px; */
 }
 
 button{
@@ -244,7 +233,7 @@ button:hover{
 .sell{
 	width:100%;
 	height:100vh;
-	background-image:url('./img/sellHouse.jpg');
+	background-image:url('./Style/img/sellHouse.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -253,7 +242,7 @@ button:hover{
 }
 
 .sell-content{
-	width:60%;
+	width:100%;
 	padding: 50px;
 	color:#785d4d;
 	display: flex;
@@ -264,24 +253,24 @@ button:hover{
 .sell-content h1{
 	font-size:4vmin;
 	margin: 0;
-	position:absolute;
+	/* position:absolute;
 	top:1800px;
-	left: 30px;
+	left: 30px; */
 }
 
 .sell-content p{
 	color: rgb(0, 0, 0);
 	margin:0;
-	position:absolute;
+	/* position:absolute;
 	top:1855px;
-	left:30px;
+	left:30px; */
 }
 
 .sell-content .ctn{
 	margin:0;
-	position:absolute;
+	/* position:absolute;
 	top:1900px;
-	left:30px;
+	left:30px; */
 }
 /*
 h2{

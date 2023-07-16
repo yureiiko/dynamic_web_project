@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="Style/footer.css">
+
 <footer>
 	<br>
 	<br>
@@ -32,5 +34,3 @@
 
 <center><div id="footer">Copyright &copy; Grandeur Estates & Cars<br>       <a href="Grandeur.estates&cars@gmail.com">Grandeur.estates&cars@gmail.com</a>   </div></center> 
 </footer>
-	</body>
-</html>
