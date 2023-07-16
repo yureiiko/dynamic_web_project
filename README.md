@@ -30,5 +30,6 @@
 - [X] admin and seller log out : 12/07
 - [X] seller add product : 13/07
 - [X] products.php : 17/07
-- [ ] Cars.php : 17/07
+- [X] Cars.php : 17/07
 - [ ] buyer login : 17/07
+- [ ] Cart creation : 17/07
