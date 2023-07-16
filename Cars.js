@@ -105,3 +105,36 @@
       var priceElement = document.querySelector('.' + section.replace(/\s+/g, '').toLowerCase() + '-card .price');
       priceElement.textContent = carsData[section].prices[newIndex];
     }
+
+function changeCar2(iddiv,maxid) {
+  max = document.getElementById(maxid).value;
+  console.log(max);
+  //hide the current car div
+  document.getElementById(iddiv).style.display = "none" ;
+  //show the next one
+  document.getElementById(iddiv%max).style.display = "block";
+}
+
+function changeCarSUV(iddiv) {
+  changeCar2(iddiv,"maxsuv");
+}
+
+function changeCarSport(iddiv) {
+  changeCar2(iddiv,"maxsport");
+}
+
+function changeCarConv(iddiv) {
+  changeCar2(iddiv,"maxconv");
+}
+
+function changeCarCoupe(iddiv) {
+  changeCar2(iddiv,"maxcoupe");
+}
+
+function changeCarTourer(iddiv) {
+  changeCar2(iddiv,"maxtourer");
+}
+
+function changeCarAmerica(iddiv) {
+  changeCar2(iddiv,"maxamerica");
+}

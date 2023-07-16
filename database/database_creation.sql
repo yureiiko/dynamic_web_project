@@ -40,7 +40,7 @@ create table product (
     id_prod integer primary key auto_increment,
     img_src varchar(30) not null,
     descrip varchar(60) not null,
-    type_prod varchar(10) not null,
+    type_prod varchar(30) not null,
     id_seller integer not null,
     foreign key (id_seller) references seller(id_seller)
 );
@@ -93,8 +93,12 @@ insert into admin(username, passwd) values("admin", "admin");
 insert into buyer(username, passwd, iban) values("cam", "testcam", "1234");
 insert into seller(username, passwd, iban) values("sue", "testsue", "9876");
 insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "bin for test", "castle", 1);
-insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "auction for test", "house", 1);
-insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "best offer for test", "car", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "bin suv1", "suv", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "bin suv2", "suv", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "auction for test", "penthouse", 1);
+insert into product(img_src, descrip, type_prod, id_seller) values("src_bin", "best offer for test", "suv", 1);
 insert into BIN(price, id_prod) values(15, 1);
-insert into auction(deadline, id_prod) values("2023-08-23", 2);
-insert into best_offer(seller_price, id_prod) values(100, 3);
+insert into BIN(price, id_prod) values(15, 2);
+insert into BIN(price, id_prod) values(15, 3);
+insert into auction(deadline, id_prod) values("2023-08-23", 4);
+insert into best_offer(seller_price, id_prod) values(100, 5);

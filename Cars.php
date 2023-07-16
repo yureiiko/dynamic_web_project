@@ -48,7 +48,28 @@
 </nav>
 <br><br><br><br><br><br>
   <center><h2><a name="SUV">SUV</h2></center><br>
-  <div class="cars-card">
+  <?php
+  $usr = "root";
+  $password = "";
+  $database = "dynamic_web_project";
+  $conn = new mysqli("localhost", $usr, $password, $database);
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='suv'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>SUV</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="SUVCarsImage" src="style/img/SUV1.jpg" alt="SUV1">
     <div class="description">
       <h4 id="SUVTitle">SUV1</h4>
@@ -60,10 +81,27 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('SUV')">Next</button></center>
+  <center><button onclick="changeCar('SUV')">Next</button></center>--->
 
   <center><h2><a name="Sports car">Sport cars</h2></center>
-  <div class="cars-card">
+  <?php
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='sportcar'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>Sport Car</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="SportCarsImage" src="style/img/Sport1.jpg" alt="Sport1">
     <div class="description">
       <h4 id="SportTitle">Sport1</h4>
@@ -75,10 +113,27 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('Sport')">Next</button></center>
+  <center><button onclick="changeCar('Sport')">Next</button></center>--->
 
   <center><h2><a name="Convertible">Convertible</h2></center>
-  <div class="cars-card">
+  <?php
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='convertible'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>Convertible</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="ConvertibleCarsImage" src="style/img/Convertible1.jpg" alt="Convertible1">
     <div class="description">
       <h4 id="ConvertibleTitle">Convertible1</h4>
@@ -90,10 +145,27 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('Convertible')">Next</button></center>
+  <center><button onclick="changeCar('Convertible')">Next</button></center>--->
 
   <center><h2><a name="Coupe">Coupe</h2></center>
-  <div class="cars-card">
+  <?php
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='coupe'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>Coupe</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="CoupeCarsImage" src="style/img/Coupe1.jpg" alt="Coupe1">
     <div class="description">
       <h4 id="CoupeTitle">Coupe1</h4>
@@ -105,10 +177,27 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('Coupe')">Next</button></center>
+  <center><button onclick="changeCar('Coupe')">Next</button></center>--->
 
   <center><h2><a name="Grand Tourer">Grand Tourer</h2></center>
-  <div class="cars-card">
+  <?php
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='grandtourer'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>Crand Tourer</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="GrandTourerCarsImage" src="style/img/GT1.jpg" alt="GT1">
     <div class="description">
       <h4 id="GrandTourerTitle">Grand Tourer1</h4>
@@ -120,10 +209,27 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('Grand Tourer')">Next</button></center>
+  <center><button onclick="changeCar('Grand Tourer')">Next</button></center>--->
 
   <center><h2><a name="American Cars">American Cars</h2></center>
-  <div class="cars-card">
+  <?php
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='americancar'";
+  $res = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($res)) {
+    echo "<div class='cars-card'>
+    <img src='".$row["img_src"]."'>
+    <div class='description'>
+      <h4>American Car</h4>
+      <p>".$row["descrip"]."</p>
+      <p>£".$row["price"]."</p>
+      <button>Add</button><br>
+    </div>
+    </div>
+    <br>
+    ";
+  }
+  ?>
+  <!---<div class="cars-card">
     <img id="AmericanCarsImage" src="style/img/American1.jpg" alt="American1">
     <div class="description">
       <h4 id="AmericanTitle">American1</h4>
@@ -135,7 +241,7 @@
     </div>
   </div>
   <br>
-  <center><button onclick="changeCar('American')">Next</button></center>
+  <center><button onclick="changeCar('American')">Next</button></center>--->
   <footer>
   <br>
   <br>
