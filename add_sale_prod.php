@@ -17,7 +17,12 @@
         <form action="addProd.php" method="POST" enctype="multipart/form-data">
             <label for="prod_type">What is the type of your product : </label>
             <select name="prod_type" id="prod_type">
-                <option value="car">Car</option>
+                <option value="suv">SUV</option>
+                <option value="sportcar">Sport car</option>
+                <option value="convertible">Convertible</option>
+                <option value="coupe">Coupe</option>
+                <option value="grandtourner">Grand Tourner</option>
+                <option value="americancar">American Car</option>
                 <option value="castle">Castle</option>
                 <option value="mansion">Mansion</option>
                 <option value="villa">Villa</option>
