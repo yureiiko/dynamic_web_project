@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="Style/Cars.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/Cars.js"></script>
+  <script src="js/linkedToCart.js"></script>
 </head>
 <body>
   <nav>
@@ -58,7 +60,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 ?>
   <center><h2><a name="SUV">SUV</h2></center><br>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='suv'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='suv'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -67,7 +69,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>SUV</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>
@@ -90,7 +92,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Sports car">Sport cars</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='sportcar'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='sportcar'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -99,7 +101,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>Sport Car</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>
@@ -122,7 +124,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Convertible">Convertible</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='convertible'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='convertible'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -131,7 +133,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>Convertible</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>
@@ -154,7 +156,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Coupe">Coupe</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='coupe'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='coupe'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -163,7 +165,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>Coupe</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>
@@ -186,7 +188,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Grand Tourer">Grand Tourer</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='grandtourer'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='grandtourer'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -195,7 +197,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>Crand Tourer</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>
@@ -218,7 +220,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="American Cars">American Cars</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='americancar'";
+  $query = "select p.id_prod, p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='americancar'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -227,7 +229,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
       <h4>American Car</h4>
       <p>".$row["descrip"]."</p>
       <p>£".$row["price"]."</p>
-      <button>Add</button><br>
+      <button onclick='addToCart(".$row["id_prod"].")'>Add</button><br>
     </div>
     </div>
     <br>

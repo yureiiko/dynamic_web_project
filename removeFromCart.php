@@ -6,7 +6,7 @@ if (isset($_COOKIE["buyer"])) {
         $password = "";
         $database = "dynamic_web_project";
         $conn = new mysqli("localhost", $usr, $password, $database);
-        $query = "insert into cart(id_prod, id_buyer) values(".$_POST["id_prod"].",".$_COOKIE["buyer"].")";
+        $query = "delete from cart where id_prod=".$_POST["id_prod"]." and id_buyer=".$_COOKIE["buyer"];
         $res = mysqli_query($conn, $query);
         if ($res) {
             mysqli_close($conn);

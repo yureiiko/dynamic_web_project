@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Cars.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/linkedToCart.js"></script>
     </head>
     <body>
         <nav>
@@ -62,7 +64,7 @@
                 $query = "select p.id_prod, p.img_src, p.descrip, p.type_prod, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].")";
                 $res = mysqli_query($conn, $query);
                 while ($row=mysqli_fetch_array($res)) {
-                    echo "<img src='".$row["img_src"]."'> ".$row["type_prod"]." <b>".$row["descrip"]."</b> £".$row["price"]." <button onclick='extFromCart(".$row["id_prod"].")' value='Remove'><br>";
+                    echo "<img src='".$row["img_src"]."'> ".$row["type_prod"]." <b>".$row["descrip"]."</b> £".$row["price"]." <button onclick='removeFromCart(".$row["id_prod"].")'>Remove</button><br>";
                 }
                 ?>
             </div>
