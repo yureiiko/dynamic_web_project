@@ -10,37 +10,42 @@
     </head>
     <body>
         <nav>
+            <!-- Logo -->
             <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
-            <!--<h1>LOGO</h1>-->
+            
             <ul class="main-menu">
+                <!-- Main menu items -->
                 <li><a href="">Home</a></li>
                 <li><a href="">Estates</a>
-                <ul class="sub-menu">
-                    <li><a href="products.php#Castles">Castles</a></li>
-                    <li><a href="products.php#Mansions">Mansions</a></li>
-                    <li><a href="products.php#Villas">Villas</a></li>
-                    <li><a href="products.php#Apartments">Apartments</a></li>
-                    <li><a href="products.php#Islands">Islands</a></li>
-                    <li><a href="products.php#Pentouses">Penthouses</a></li>
-                    <li><a href="products.php#Chalets">Chalets</a></li>
-                    <li><a href="products.php#Bungalows">Bungalows</a></li>
-                </ul>
+                    <ul class="sub-menu">
+                        <!-- Submenu items for estates -->
+                        <li><a href="products.php#Castles">Castles</a></li>
+                        <li><a href="products.php#Mansions">Mansions</a></li>
+                        <li><a href="products.php#Villas">Villas</a></li>
+                        <li><a href="products.php#Apartments">Apartments</a></li>
+                        <li><a href="products.php#Islands">Islands</a></li>
+                        <li><a href="products.php#Pentouses">Penthouses</a></li>
+                        <li><a href="products.php#Chalets">Chalets</a></li>
+                        <li><a href="products.php#Bungalows">Bungalows</a></li>
+                    </ul>
                 </li>
                 <li><a href="">Cars</a>
-                <ul class="sub-menu">
-                    <li><a href="Cars.php#SUV">SUV</a></li>
-                    <li><a href="Cars.php#Sports car">Sports cars</a></li>
-                    <li><a href="Cars.php#Convertible">Convertible</a></li>
-                    <li><a href="Cars.php#Coupe">Coupe</a></li>
-                    <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
-                    <li><a href="Cars.php#American Cars">American cars</a></li>
-                </ul>
+                    <ul class="sub-menu">
+                        <!-- Submenu items for cars -->
+                        <li><a href="Cars.php#SUV">SUV</a></li>
+                        <li><a href="Cars.php#Sports car">Sports cars</a></li>
+                        <li><a href="Cars.php#Convertible">Convertible</a></li>
+                        <li><a href="Cars.php#Coupe">Coupe</a></li>
+                        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
+                        <li><a href="Cars.php#American Cars">American cars</a></li>
+                    </ul>
                 </li>
                 <li><a href="">Special Offers</a> 
-                <ul class="sub-menu">
-                    <li><a href="">Best Offers</a></li>
-                    <li><a href="">Bids</a></li>
-                </ul>
+                    <ul class="sub-menu">
+                        <!-- Submenu items for special offers -->
+                        <li><a href="">Best Offers</a></li>
+                        <li><a href="">Bids</a></li>
+                    </ul>
                 </li>
                 <li><a href="buyer_cart.php">Cart</a></li>
                 <li><a href="">My Account</a></li>
@@ -48,22 +53,29 @@
             </ul>
         </nav>
         <br><br><br><br><br><br>
+        
         <?php
+        // Check if buyer cookie is set, if not redirect to login page
         if (!isset($_COOKIE["buyer"])) {
-        header("Location: login.php");
+            header("Location: login.php");
         }
+        
+        // Connect to the database
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
         $conn = new mysqli("localhost", $usr, $password, $database);
         ?>
+        
         <div class="inCart">
             <div class="bin">
                 <h4>Buy it now</h4>
                 <?php
+                // Query to retrieve products in the cart for buy it now
                 $query = "select p.id_prod, p.img_src, p.descrip, p.type_prod, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].")";
                 $res = mysqli_query($conn, $query);
                 while ($row=mysqli_fetch_array($res)) {
+                    // Display each product in the cart with remove button
                     echo "<img src='".$row["img_src"]."'> ".$row["type_prod"]." <b>".$row["descrip"]."</b> £".$row["price"]." <button onclick='removeFromCart(".$row["id_prod"].")'>Remove</button><br>";
                 }
                 ?>
