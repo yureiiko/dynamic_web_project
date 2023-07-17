@@ -8,6 +8,7 @@
 - [X] find images : 06/07
 - [X] all admin pages : 10/07
 - [ ] all buyer and seller main pages : 15/07
+- [ ] payement page
 
 ## Back
 
