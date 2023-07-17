@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav>
-  <img src="GEC(2).png" class="style/img/logo" width="550" height="50">
+  <img src="Style/img/GEC (2).png" class="style/img/logo" width="550" height="50">
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
     <li><a href="">Home</a></li>
