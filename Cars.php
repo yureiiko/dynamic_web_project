@@ -16,13 +16,13 @@
     <li><a href="">Estates</a>
       <ul class="sub-menu">
         <li><a href="products.php#Castles">Castles</a></li>
-        <li><a href="">Mansions</a></li>
-        <li><a href="">Villas</a></li>
-        <li><a href="">Apartments</a></li>
-        <li><a href="">Islands</a></li>
-        <li><a href="">Penthouses</a></li>
-        <li><a href="">Chalets</a></li>
-        <li><a href="">Bungalows</a></li>
+        <li><a href="products.php#Mansions">Mansions</a></li>
+        <li><a href="products.php#Villas">Villas</a></li>
+        <li><a href="products.php#Apartments">Apartments</a></li>
+        <li><a href="products.php#Islands">Islands</a></li>
+        <li><a href="products.php#Pentouses">Penthouses</a></li>
+        <li><a href="products.php#Chalets">Chalets</a></li>
+        <li><a href="products.php#Bungalows">Bungalows</a></li>
       </ul>
     </li>
     <li><a href="">Cars</a>

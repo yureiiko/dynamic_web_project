@@ -27,12 +27,12 @@
     </li>
     <li><a href="">Cars</a>
       <ul class="sub-menu">
-        <li><a href="">SUV</a></li>
-        <li><a href="">Sports car</a></li>
-        <li><a href="">Convertible</a></li>
-        <li><a href="">Coupe</a></li>
-        <li><a href="">Grand Tourer</a></li>
-        <li><a href="">American cars</a></li>
+        <li><a href="Cars.php#SUV">SUV</a></li>
+        <li><a href="Cars.php#Sports car">Sports cars</a></li>
+        <li><a href="Cars.php#Convertible">Convertible</a></li>
+        <li><a href="Cars.php#Coupe">Coupe</a></li>
+        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
+        <li><a href="Cars.php#American Cars">American cars</a></li>
       </ul>
     </li>
     <li><a href="">Special Offers</a> 
