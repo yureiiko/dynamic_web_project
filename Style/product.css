@@ -1,0 +1,220 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+
+nav{
+	width: 100%;
+  position: fixed;
+	height: 25px;
+	line-height: 25px;
+	padding:0px 50px;
+}
+nav h1{
+	font-size: 32px;
+	font-family: sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	float: left;
+}
+
+
+nav ul {
+  background-color: rgba(238, 238, 238, 0.75);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li:hover {
+  background-color: rgba(117, 117, 117, 0.75);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #757575;
+}
+nav a:hover {
+  color: #eee;
+}
+
+
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(238, 238, 238, 0.75);
+  backgr
+}
+
+nav ul li:hover > ul {
+  display: block;
+
+}
+nav ul li  ul li:hover{
+  background-color: rgba(117, 117, 117, 0.75);
+
+}
+nav ul ul li {
+  width: 100%;
+  display: block;
+}
+.Castle-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+
+}
+.Mansion-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+
+}
+.Villa-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+
+}
+.Apartment-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+.Islands-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+.Penthouses-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+.Chalets-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+
+.Bungalows-containers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+
+.conteneur{
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+
+}
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button {
+  width: 50px;
+  text-align: center;
+}
+.order {
+  display: flex;
+  flex-direction: row;
+  border-style: ridge;
+}
+table {
+      border-collapse: separate;
+      border-spacing: 10px; /* Ajoute un espace de 10 pixels entre les colonnes */
+    }
+
+td {
+  font-family: times new roman;
+  position: relative;
+
+  justify-content: center;
+}
+#mytable td{
+    padding-left: 140px;
+
+}
+#mytable tH{
+    padding-left: 140px;
+}
+#mytable tr tH a{
+text-decoration: none;
+color: black;
+}
+#mytable tr td a{
+text-decoration: none;
+color: darkgrey;
+}
+button {
+width: 80px;
+height: 30px;
+}

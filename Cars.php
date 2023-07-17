@@ -4,8 +4,8 @@
   <title>Cars</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="Cars.css">
-  <script src="Cars.js" ></script>
+  <link rel="stylesheet" type="text/css" href="Style/Cars.css">
+  <script src="js/Cars.js"></script>
 </head>
 <body>
   <nav>
@@ -13,7 +13,7 @@
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
     <li><a href="">Home</a></li>
-    <li><a href="">Estates</a>
+    <li><a href="products.php">Estates</a>
       <ul class="sub-menu">
         <li><a href="products.php#Castles">Castles</a></li>
         <li><a href="products.php#Mansions">Mansions</a></li>
@@ -25,14 +25,14 @@
         <li><a href="products.php#Bungalows">Bungalows</a></li>
       </ul>
     </li>
-    <li><a href="">Cars</a>
+    <li><a href="Cars.php">Cars</a>
       <ul class="sub-menu">
-        <li><a href="#SUV">SUV</a></li>
-        <li><a href="#Sports car">Sports cars</a></li>
-        <li><a href="#Convertible">Convertible</a></li>
-        <li><a href="#Coupe">Coupe</a></li>
-        <li><a href="#Grand Tourer">Grand Tourer</a></li>
-        <li><a href="#American Cars">American cars</a></li>
+        <li><a href="Cars.php#SUV">SUV</a></li>
+        <li><a href="Cars.php#Sports car">Sports cars</a></li>
+        <li><a href="Cars.php#Convertible">Convertible</a></li>
+        <li><a href="Cars.php#Coupe">Coupe</a></li>
+        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
+        <li><a href="Cars.php#American Cars">American cars</a></li>
       </ul>
     </li>
     <li><a href="">Special Offers</a> 
@@ -41,7 +41,7 @@
         <li><a href="">Bids</a></li>
       </ul>
     </li>
-    <li><a href="">Cart</a></li>
+    <li><a href="buyer_cart.php">Cart</a></li>
     <li><a href="">My Account</a></li>
     <li><a href="">Contact Us</a></li>
   </ul>
@@ -58,7 +58,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 ?>
   <center><h2><a name="SUV">SUV</h2></center><br>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='suv'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='suv'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -90,7 +90,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Sports car">Sport cars</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='sportcar'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='sportcar'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -122,7 +122,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Convertible">Convertible</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='convertible'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='convertible'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -154,7 +154,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Coupe">Coupe</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='coupe'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='coupe'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -186,7 +186,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="Grand Tourer">Grand Tourer</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='grandtourer'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='grandtourer'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>
@@ -218,7 +218,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
   <center><h2><a name="American Cars">American Cars</h2></center>
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='americancar'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='americancar'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "<div class='cars-card'>

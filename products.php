@@ -5,7 +5,7 @@
 	<title>GEC</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="product.css">
+	<link rel="stylesheet" type="text/css" href="Style/product.css">
 </head>
 <body>
 <nav>
@@ -13,7 +13,7 @@
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
     <li><a href="">Home</a></li>
-    <li><a href="">Estates</a>
+    <li><a href="products.php">Estates</a>
       <ul class="sub-menu">
         <li><a href="#Castles" target="blank">Castles</a></li>
         <li><a href="#Mansions" target="blank">Mansions</a></li>
@@ -25,7 +25,7 @@
         <li><a href="#Bungalows" target="blank">Bungalows</a></li>
       </ul>
     </li>
-    <li><a href="">Cars</a>
+    <li><a href="Cars.php">Cars</a>
       <ul class="sub-menu">
         <li><a href="Cars.php#SUV">SUV</a></li>
         <li><a href="Cars.php#Sports car">Sports cars</a></li>
@@ -41,7 +41,7 @@
         <li><a href="">Bids</a></li>
       </ul>
     </li>
-    <li><a href="">Cart</a></li>
+    <li><a href="buyer_cart.php">Cart</a></li>
     <li><a href="">My Account</a></li>
     <li><a href="">Contact Us</a></li>
   </ul>
@@ -62,7 +62,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 ?>
 <div class="Castle-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='castle'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='castle'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -124,7 +124,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 
 <div class="Mansion-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='mansion'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='mansion'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -184,7 +184,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Villas">Villas</a></h2></center>
 <div class="Villa-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='villa'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='villa'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -245,7 +245,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Apartments">Apartments</a></h2></center>
 <div class="Apartment-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='apartment'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='apartment'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -305,7 +305,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Islands">Islands</a></h2></center>
 <div class="Islands-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='island'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='island'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -365,7 +365,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Penthouses">Penthouses</a></h2></center>
 <div class="Penthouses-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='penthouse'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='penthouse'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -425,7 +425,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Chalets">Chalets</a></h2></center>
 <div class="Chalets-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='chalet'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='chalet'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
@@ -485,7 +485,7 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 <center><h2><a name="Bungalows">Bungalows</a></h2></center>
 <div class="Bungalows-containers">
   <?php
-  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.type_prod='bungalow'";
+  $query = "select p.img_src, p.descrip, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod not in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].") and p.type_prod='bungalow'";
   $res = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($res)) {
     echo "
