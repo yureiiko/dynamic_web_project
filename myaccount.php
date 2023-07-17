@@ -65,9 +65,8 @@
                     <h2>Account Settings</h2>
                     <ul>
                         <li><a href="link_bs.php">Profile</a></li>
-                        <li><a href="address.html">Address Book</a></li>
-                        <li><a href="change-password.html">Change Password</a></li>
-                        <li><a href="logout.html">Logout</a></li>
+                        <li><a href="passwordchange.php">Change Password</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
