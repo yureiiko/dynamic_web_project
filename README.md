@@ -35,6 +35,6 @@
 - [X] buyer login : 17/07
 - [X] Cart creation : 17/07
 - [X] BIN in Cart : 17/07
-- [ ] Auction fonctionnal : 18/07
+- [X] Auction fonctionnal : 18/07
 - [ ] Auction in Cart : 19/07
 - [ ] link buyer's pages : 18/07
