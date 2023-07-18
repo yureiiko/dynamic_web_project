@@ -46,7 +46,7 @@
       </ul>
     </li>
     <li><a href="buyer_cart.php">Cart</a></li>
-    <li><a href="">My Account</a></li>
+    <li><a href="myaccount.php">My Account</a></li>
     <li><a href="">Contact Us</a></li>
   </ul>
 </nav>
