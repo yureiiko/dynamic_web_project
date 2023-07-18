@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Payment Form</title>
-	<link rel="stylesheet" type="text/css" href="style/payement.css">
+	<link rel="stylesheet" type="text/css" href="Style/payement.css">
 	<script src="js/payement.js"></script>
 </head>
 <body>
@@ -42,17 +42,19 @@
 			</select>
 		</div>
 
-		<!-- Product Information -->
+		<!-- Price Information -->
 		<div class="section">
-			<h3 class="section-title">Product Information</h3>
-			<label for="product_name">Product Name:</label>
-			<input type="text" id="product_name" name="product_name" placeholder="Product Name" required>
-
-			<label for="quantity">Quantity:</label>
-			<input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
-
-			<label for="total_amount">Total Amount:</label>
-			<input type="text" id="total_amount" name="total_amount" placeholder="Total Amount" required>
+			<label for="total_amount">Total Amount:
+				<?php
+				if (!isset($_COOKIE["buyer"])) {
+					header("Location: login.php");
+				}
+				if (!isset($_POST["totalPrice"]) || !isset($_POST["ids"])) {
+					header("Location: buyer_cart.php");
+				}
+				echo $_POST["totalPrice"];
+				?>
+			</label>
 		</div>
 
 		<!-- Payment Information -->
@@ -93,6 +95,6 @@
 		</div>
 
 		<input type="submit" value="Pay">
-	</form>
+		</form>
 	</body>
 </html>
