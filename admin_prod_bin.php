@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Grandeur Estates & Cars : Admin product buy it now</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Grandeur Estates & Cars : Admin product buy it now</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="js/prodDelete_check.js"></script>
         <style>
@@ -56,17 +56,23 @@ body {
 	</head>
 	<body>
         <?php
-		if (!isset($_COOKIE["admin"])) {
-			header("Location: login.php");
-		}
-		?>
+        // Check if admin cookie is set, if not redirect to login page
+        if (!isset($_COOKIE["admin"])) {
+            header("Location: login.php");
+        }
+        ?>
         <h4>Product buy it now</h4>
-		<?php
+        <?php
+        // Database connection parameters
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
         $port = 3308;
+        
+        // Establish database connection
         $conn = new mysqli("localhost", $usr, $password, $database);
+        
+        // Check if the connection was successful
         if ($conn->connect_error) {
             echo "db error <br>";
         }
@@ -84,5 +90,5 @@ body {
         ?>
 
         <span id="del"></span>
-	</body>
+    </body>
 </html>
