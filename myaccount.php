@@ -90,7 +90,10 @@
                     <ul>
                         <!--<li><a href="link_bs.php">Profile</a></li>
                         <li><a href="passwordchange.php">Change Password</a></li>-->
-                        <li><a href="logout.php">Logout</a></li>
+                        <form action="logout.php" method="POST">
+                            <input type="hidden" name="usrtype" value="buyer">
+                            <input type="submit" value="Log out">
+                        </form>
                     </ul>
                 </div>
             </div>

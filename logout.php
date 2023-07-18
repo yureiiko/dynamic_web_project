@@ -15,6 +15,13 @@ if (isset($_POST["usrtype"])) {
                 header("Location: login.php");
             }
             break;
+        case 'buyer':
+            if (isset($_COOKIE["buyer"])) {
+                setcookie("buyer", "", time()-3600);
+                unset($_COOKIE["buyer"]);
+                header("Location: login.php");
+            }
+            break;
         default:
             header("Location: login.php");
             break;
