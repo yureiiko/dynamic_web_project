@@ -8,14 +8,14 @@
     <li><a href="index.php">Home</a></li>
     <li><a href="products.php">Estates</a>
       <ul class="sub-menu">
-        <li><a href="#Castles" target="blank">Castles</a></li>
-        <li><a href="#Mansions" target="blank">Mansions</a></li>
-        <li><a href="#Villas" target="blank">Villas</a></li>
-        <li><a href="#Apartments" target="blank">Apartments</a></li>
-        <li><a href="#Islands" target="blank">Islands</a></li>
-        <li><a href="#Penthouses" target="blank">Penthouses</a></li>
-        <li><a href="#Chalets" target="blank">Chalets</a></li>
-        <li><a href="#Bungalows" target="blank">Bungalows</a></li>
+        <li><a href="products.php#Castles" target="blank">Castles</a></li>
+        <li><a href="products.php#Mansions" target="blank">Mansions</a></li>
+        <li><a href="products.php#Villas" target="blank">Villas</a></li>
+        <li><a href="products.php#Apartments" target="blank">Apartments</a></li>
+        <li><a href="products.php#Islands" target="blank">Islands</a></li>
+        <li><a href="products.php#Penthouses" target="blank">Penthouses</a></li>
+        <li><a href="products.php#Chalets" target="blank">Chalets</a></li>
+        <li><a href="products.php#Bungalows" target="blank">Bungalows</a></li>
       </ul>
     </li>
     <li><a href="Cars.php">Cars</a>
@@ -33,7 +33,7 @@
     <li><a href="">Special Offers</a> 
       <ul class="sub-menu">
         <li><a href="">Best Offers</a></li>
-        <li><a href="">Bids</a></li>
+        <li><a href="buyer_bid.php">Bids</a></li>
       </ul>
     </li>
     <li><a href="buyer_cart.php">Cart</a></li>

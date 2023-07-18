@@ -12,44 +12,9 @@
   <script src="js/linkedToCart.js"></script>
 </head>
 <body>
-  <nav>
-  <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
-  <!--<h1>LOGO</h1>-->
-  <ul class="main-menu">
-    <li><a href="">Home</a></li>
-    <li><a href="products.php">Estates</a>
-      <ul class="sub-menu">
-        <li><a href="products.php#Castles">Castles</a></li>
-        <li><a href="products.php#Mansions">Mansions</a></li>
-        <li><a href="products.php#Villas">Villas</a></li>
-        <li><a href="products.php#Apartments">Apartments</a></li>
-        <li><a href="products.php#Islands">Islands</a></li>
-        <li><a href="products.php#Pentouses">Penthouses</a></li>
-        <li><a href="products.php#Chalets">Chalets</a></li>
-        <li><a href="products.php#Bungalows">Bungalows</a></li>
-      </ul>
-    </li>
-    <li><a href="Cars.php">Cars</a>
-      <ul class="sub-menu">
-        <li><a href="Cars.php#SUV">SUV</a></li>
-        <li><a href="Cars.php#Sports car">Sports cars</a></li>
-        <li><a href="Cars.php#Convertible">Convertible</a></li>
-        <li><a href="Cars.php#Coupe">Coupe</a></li>
-        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
-        <li><a href="Cars.php#American Cars">American cars</a></li>
-      </ul>
-    </li>
-    <li><a href="">Special Offers</a> 
-      <ul class="sub-menu">
-        <li><a href="">Best Offers</a></li>
-        <li><a href="">Bids</a></li>
-      </ul>
-    </li>
-    <li><a href="buyer_cart.php">Cart</a></li>
-    <li><a href="myaccount.php">My Account</a></li>
-    <li><a href="">Contact Us</a></li>
-  </ul>
-</nav>
+<?php
+include("Include/Navigation.php");
+?>
 <br><br><br><br><br><br>
 <?php
 if (!isset($_COOKIE["buyer"])) {
