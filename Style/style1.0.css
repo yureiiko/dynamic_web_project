@@ -7,31 +7,7 @@ header {
 	height: 80px;
 	margin : 10px
 }
-/* nav {
-	list-style-type: none;
-	display: inline-block;
-	width: 100%;
-	background-color: #eed9c4;
-	height: 25px;
-	line-height: 25px;
-	padding:0px 50px;
-}
-nav ul li a {
-	letter-spacing: 0.1rem;
-}
-nav ul li a:hover {
-	color: hotpink;
-	size: 20px;
-	text-decoration: underline;
 
-}
-.menu li {
-	float: left;
-	padding: 35px;
-}
-.menu li a {
-	text-decoration: none;
-} */
 form {
 	padding: 35px;
 	text-align : right;
@@ -64,59 +40,7 @@ input[type="search"]{
 		background-position: center;
 	}
 }
-/* .navbar{
-	width:85%;
-	margin:auto;
-	padding:35px 0;
-	display:flex;
-	align-items:center;
-	justify-content:space-between;
-}
-.logo{
-	width:150px;
-	cursor:pointer;
-}
-.navbar ul li{
-	list-style:none;
-	display:inline-block;
-	margin:0 20px;
-	position: relative;
-}	
-.navbar ul li a{
-	text-decoration: none;
-	color: #fff;
-	text-transform: uppercase;
-}
-.navbar ul li::after{
-	content: '';
-	height: 3px;
-	width: 0;
-	background:#eed9c4;
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	transition:0.5s;
-}
-.navbar ul li:hover::after{
-	width:100%;
-} 
 
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline-block;
-  margin-right: 10px;
-}
-*/
 .content{
 	width:100%;
 	position: absolute;
@@ -233,7 +157,7 @@ button:hover{
 .sell{
 	width:100%;
 	height:100vh;
-	background-image:url('./Style/img/sellHouse.jpg');
+	background-image:url('img/sellHouse.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -272,16 +196,7 @@ button:hover{
 	top:1900px;
 	left:30px; */
 }
-/*
-h2{
-background: #eed9c4;
-text-align: center;
-border-radius: 15px;
-height: 50px;
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-color: black;
-font-family: cusrsive, Times New Roman;
-}*/
+	
 table {
       border-collapse: separate;
       border-spacing: 10px; /* Ajoute un espace de 10 pixels entre les colonnes */

@@ -16,8 +16,11 @@
 		?>
 		<form action="logout.php" method="POST">
 			<input type="hidden" name="usrtype" value="admin">
-			<input type="submit" value="Log out">
+			<input type="submit" value="Log out" class="logout-btn">
 		</form>
+		<a href="index.php">
+		<img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
+		</a>
 		<h1>Welcome Admin</h1>
 		<div class="der">
 			<span id="p" onclick="revFrame(0)"><h4>Products</h4></span>

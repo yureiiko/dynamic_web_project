@@ -6,6 +6,36 @@
 		<title>Grandeur Estates & Cars : Admin buyer frame</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="js/userDelete_check.js"></script>
+        
+        <style>
+
+        .buyer-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #785d4d;
+            color: #eed9c4;
+            margin-bottom: 10px;
+        }
+
+        .buyer-item button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #eed9c4;
+            color: #785d4d;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buyer-item button:hover {
+            background-color: #785d4d;
+            color: #eed9c4;
+        }
+        </style>
+
 	</head>
 	<body>
         <?php
@@ -34,8 +64,8 @@
 
         // Iterate over each buyer record and display the information
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div id='".$row["id_buyer"]."'>".$row["id_buyer"]." <b>".$row["username"]."</b> ".$row["iban"]." <button onclick='checkDel(".$row["id_buyer"].",1)'>Delete</button><div>";
-        }
+            echo "<div class='buyer-item' id='".$row["id_buyer"]."'>".$row["id_buyer"]." <b>".$row["username"]."</b> ".$row["iban"]." <button onclick='checkDel(".$row["id_buyer"].",1)'>Delete</button><div>";
+        }   
         ?>
         <span id="del"></span>
 	</body>

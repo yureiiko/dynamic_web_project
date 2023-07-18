@@ -6,6 +6,7 @@
 		<title>Grandeur Estates & Cars : Admin product frame</title>
 		<link rel="stylesheet" href="Style/styleProdFrame.css">
 		<script type="text/javascript" src="js/frameRev.js"></script>
+		
 	</head>
 	<body>
 		<?php

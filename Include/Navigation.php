@@ -5,7 +5,7 @@
   <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
-    <li><a href="">Home</a></li>
+    <li><a href="add_sale_prod.php">Home</a></li>
     <li><a href="">Estates</a>
       <ul class="sub-menu">
         <li><a href="">Castles</a></li>
