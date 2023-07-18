@@ -4,35 +4,31 @@
         <title>Cart</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="Cars.css">
+        <link rel="stylesheet" type="text/css" href="style/Cars.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/linkedToCart.js"></script>
     </head>
     <body>
-        <nav>
-            <!-- Logo -->
-            <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
-            
-            <!-- Main menu -->
+       <nav>
+              <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
+              <!--<h1>LOGO</h1>-->
             <ul class="main-menu">
-                <!-- Main menu items -->
-                <li><a href="">Home</a></li>
-                <li><a href="">Estates</a>
-                    <!-- Submenu for estates -->
-                    <ul class="sub-menu">
-                        <!-- Submenu items for estates -->
-                        <li><a href="products.php#Castles">Castles</a></li>
-                        <li><a href="products.php#Mansions">Mansions</a></li>
-                        <li><a href="products.php#Villas">Villas</a></li>
-                        <li><a href="products.php#Apartments">Apartments</a></li>
-                        <li><a href="products.php#Islands">Islands</a></li>
-                        <li><a href="products.php#Pentouses">Penthouses</a></li>
-                        <li><a href="products.php#Chalets">Chalets</a></li>
-                        <li><a href="products.php#Bungalows">Bungalows</a></li>
-                    </ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="products.php">Estates</a>
+                  <ul class="sub-menu">
+                    <li><a href="#Castles" target="blank">Castles</a></li>
+                    <li><a href="#Mansions" target="blank">Mansions</a></li>
+                    <li><a href="#Villas" target="blank">Villas</a></li>
+                    <li><a href="#Apartments" target="blank">Apartments</a></li>
+                    <li><a href="#Islands" target="blank">Islands</a></li>
+                    <li><a href="#Penthouses" target="blank">Penthouses</a></li>
+                    <li><a href="#Chalets" target="blank">Chalets</a></li>
+                    <li><a href="#Bungalows" target="blank">Bungalows</a></li>
+                  </ul>
                 </li>
-                <li><a href="">Cars</a>
-                    <!-- Submenu for cars -->
+                <li><a href="Cars.php">Cars</a>
+                 <!-- Submenu for cars -->
                     <ul class="sub-menu">
                         <!-- Submenu items for cars -->
                         <li><a href="Cars.php#SUV">SUV</a></li>
@@ -44,18 +40,16 @@
                     </ul>
                 </li>
                 <li><a href="">Special Offers</a> 
-                    <!-- Submenu for special offers -->
-                    <ul class="sub-menu">
-                        <!-- Submenu items for special offers -->
-                        <li><a href="">Best Offers</a></li>
-                        <li><a href="">Bids</a></li>
-                    </ul>
+                  <ul class="sub-menu">
+                    <li><a href="">Best Offers</a></li>
+                    <li><a href="">Bids</a></li>
+                  </ul>
                 </li>
                 <li><a href="buyer_cart.php">Cart</a></li>
-                <li><a href="">My Account</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="myaccount.php"><i class='fas fa-user-circle'></i></a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
-        </nav>
+</nav>
         <br><br><br><br><br><br>
         
         <?php
@@ -85,5 +79,6 @@
                 ?>
             </div>
         </div>
+        <?php include('./include/Footer.php'); ?>
     </body>
 </html>

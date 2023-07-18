@@ -5,28 +5,30 @@
   <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
-    <li><a href="add_sale_prod.php">Home</a></li>
-    <li><a href="">Estates</a>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="products.php">Estates</a>
       <ul class="sub-menu">
-        <li><a href="">Castles</a></li>
-        <li><a href="">Mansions</a></li>
-        <li><a href="">Villas</a></li>
-        <li><a href="">Apartments</a></li>
-        <li><a href="">Islands</a></li>
-        <li><a href="">Penthouses</a></li>
-        <li><a href="">Chalets</a></li>
-        <li><a href="">Bungalows</a></li>
+        <li><a href="#Castles" target="blank">Castles</a></li>
+        <li><a href="#Mansions" target="blank">Mansions</a></li>
+        <li><a href="#Villas" target="blank">Villas</a></li>
+        <li><a href="#Apartments" target="blank">Apartments</a></li>
+        <li><a href="#Islands" target="blank">Islands</a></li>
+        <li><a href="#Penthouses" target="blank">Penthouses</a></li>
+        <li><a href="#Chalets" target="blank">Chalets</a></li>
+        <li><a href="#Bungalows" target="blank">Bungalows</a></li>
       </ul>
     </li>
-    <li><a href="">Cars</a>
-      <ul class="sub-menu">
-        <li><a href="">SUV</a></li>
-        <li><a href="">Sports car</a></li>
-        <li><a href="">Convertible</a></li>
-        <li><a href="">Coupe</a></li>
-        <li><a href="">Grand Tourer</a></li>
-        <li><a href="">American cars</a></li>
-      </ul>
+    <li><a href="Cars.php">Cars</a>
+     <!-- Submenu for cars -->
+                    <ul class="sub-menu">
+                        <!-- Submenu items for cars -->
+                        <li><a href="Cars.php#SUV">SUV</a></li>
+                        <li><a href="Cars.php#Sports car">Sports cars</a></li>
+                        <li><a href="Cars.php#Convertible">Convertible</a></li>
+                        <li><a href="Cars.php#Coupe">Coupe</a></li>
+                        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
+                        <li><a href="Cars.php#American Cars">American cars</a></li>
+                    </ul>
     </li>
     <li><a href="">Special Offers</a> 
       <ul class="sub-menu">
@@ -34,8 +36,8 @@
         <li><a href="">Bids</a></li>
       </ul>
     </li>
-    <li><a href="">Cart</a></li>
-    <li><a href=""><i class='fas fa-user-circle'></i></a></li>
-    <li><a href="">Contact Us</a></li>
+    <li><a href="buyer_cart.php">Cart</a></li>
+    <li><a href="myaccount.php"><i class='fas fa-user-circle'></i></a></li>
+    <li><a href="about.php">About Us</a></li>
   </ul>
 </nav>

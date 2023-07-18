@@ -5,6 +5,7 @@
 		<link rel="shortcut icon" type="x-icon" href="Style/img/GEC.png">
 		<title>GEC</title>
 		<link rel="stylesheet" type="text/css" href="Style/style1.0.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	</head>
 	<body>
 	<div class="banner">

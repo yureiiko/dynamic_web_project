@@ -5,16 +5,17 @@
 	<title>GEC</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="Style/product.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/linkedToCart.js"></script>
 </head>
 <body>
 <nav>
-  <img src="Style/img/GEC (2).png" class="style/img/logo" width="550" height="50">
+  <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
   <!--<h1>LOGO</h1>-->
   <ul class="main-menu">
-    <li><a href="">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="products.php">Estates</a>
       <ul class="sub-menu">
         <li><a href="#Castles" target="blank">Castles</a></li>
@@ -28,14 +29,16 @@
       </ul>
     </li>
     <li><a href="Cars.php">Cars</a>
-      <ul class="sub-menu">
-        <li><a href="Cars.php#SUV">SUV</a></li>
-        <li><a href="Cars.php#Sports car">Sports cars</a></li>
-        <li><a href="Cars.php#Convertible">Convertible</a></li>
-        <li><a href="Cars.php#Coupe">Coupe</a></li>
-        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
-        <li><a href="Cars.php#American Cars">American cars</a></li>
-      </ul>
+     <!-- Submenu for cars -->
+                    <ul class="sub-menu">
+                        <!-- Submenu items for cars -->
+                        <li><a href="Cars.php#SUV">SUV</a></li>
+                        <li><a href="Cars.php#Sports car">Sports cars</a></li>
+                        <li><a href="Cars.php#Convertible">Convertible</a></li>
+                        <li><a href="Cars.php#Coupe">Coupe</a></li>
+                        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
+                        <li><a href="Cars.php#American Cars">American cars</a></li>
+                    </ul>
     </li>
     <li><a href="">Special Offers</a> 
       <ul class="sub-menu">
@@ -44,14 +47,15 @@
       </ul>
     </li>
     <li><a href="buyer_cart.php">Cart</a></li>
-    <li><a href="">My Account</a></li>
-    <li><a href="">Contact Us</a></li>
+    <li><a href="myaccount.php"><i class='fas fa-user-circle'></i></a></li>
+    <li><a href="about.php">About Us</a></li>
   </ul>
 </nav>
 <br><br>
 <br><br>
 <br>
 <br>
+<main>
 <center><h2><a name="Castles">Castles</h2></center>
 <?php
 if (!isset($_COOKIE["buyer"])) {
@@ -543,40 +547,8 @@ $conn = new mysqli("localhost", $usr, $password, $database);
 </div>--->
 </div>
 <br>
-
-<footer>
-  <br>
-  <br>
-  <table id="mytable">
-    <tr>
-      <th><a href="Buy.html">Buy</a></th>
-      <th><a href="Seller.html">Sell</a></th>
-      <th><a href="Community.html">Community</a></th>
-      <th><a href="aboutus.html">About us</a></th>
-    </tr>
-    <tr>
-      <td><a href="fff">Buy it now</a></td>
-      <td><a href="fff">Seller protection</a></td>
-      <td><a href="fff">Groups</a></td>
-      <td><a href="fff">Legal Imprint</a></td>
-    </tr>
-    <tr>
-      <td><a href="fihfi"> Bid</a></td>
-      <td><a href="fff">Sell cars</a></td>
-      <td><a href="fff">News</a></td>
-      <td><a href="fff">Legal Notices</a></td>
-    </tr>
-    <tr>
-      <td><a href="fff">Black fridays offers</td>
-      <td><a href="fff">Sell estates</a></td>
-    </tr>
-    
-    
-  </table><br>
-  <hr>
-
-<center><div id="footer">Copyright &copy; Grandeur Estates & Cars<br>       <a href="Grandeur.estates&cars@gmail.com">Grandeur.estates&cars@gmail.com</a>   </div></center> 
-</footer>
+</main>
+<?php include('./include/Footer.php'); ?>
 
 </body>
 </html>
