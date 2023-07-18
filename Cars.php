@@ -1,93 +1,12 @@
 <html>
-<<<<<<< HEAD
-    <head>
-        <title>Cart</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style/Cars.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/linkedToCart.js"></script>
-    </head>
-    <body>
-       <nav>
-              <img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
-              <!--<h1>LOGO</h1>-->
-            <ul class="main-menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Estates</a>
-                  <ul class="sub-menu">
-                    <li><a href="#Castles" target="blank">Castles</a></li>
-                    <li><a href="#Mansions" target="blank">Mansions</a></li>
-                    <li><a href="#Villas" target="blank">Villas</a></li>
-                    <li><a href="#Apartments" target="blank">Apartments</a></li>
-                    <li><a href="#Islands" target="blank">Islands</a></li>
-                    <li><a href="#Penthouses" target="blank">Penthouses</a></li>
-                    <li><a href="#Chalets" target="blank">Chalets</a></li>
-                    <li><a href="#Bungalows" target="blank">Bungalows</a></li>
-                  </ul>
-                </li>
-                <li><a href="Cars.php">Cars</a>
-                 <!-- Submenu for cars -->
-                    <ul class="sub-menu">
-                        <!-- Submenu items for cars -->
-                        <li><a href="Cars.php#SUV">SUV</a></li>
-                        <li><a href="Cars.php#Sports car">Sports cars</a></li>
-                        <li><a href="Cars.php#Convertible">Convertible</a></li>
-                        <li><a href="Cars.php#Coupe">Coupe</a></li>
-                        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
-                        <li><a href="Cars.php#American Cars">American cars</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Special Offers</a> 
-                  <ul class="sub-menu">
-                    <li><a href="">Best Offers</a></li>
-                    <li><a href="">Bids</a></li>
-                  </ul>
-                </li>
-                <li><a href="buyer_cart.php">Cart</a></li>
-                <li><a href="myaccount.php"><i class='fas fa-user-circle'></i></a></li>
-                <li><a href="about.php">About Us</a></li>
-            </ul>
-</nav>
-        <br><br><br><br><br><br>
-        
-        <?php
-        // Check if buyer cookie is set, if not redirect to login page
-        if (!isset($_COOKIE["buyer"])) {
-            header("Location: login.php");
-        }
-        
-        // Connect to the database
-        $usr = "root";
-        $password = "";
-        $database = "dynamic_web_project";
-        $conn = new mysqli("localhost", $usr, $password, $database);
-        ?>
-        
-        <div class="inCart">
-            <div class="bin">
-                <h4>Buy it now</h4>
-                <?php
-                // Query to retrieve products in the cart for buy it now
-                $query = "select p.id_prod, p.img_src, p.descrip, p.type_prod, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].")";
-                $res = mysqli_query($conn, $query);
-                while ($row=mysqli_fetch_array($res)) {
-                    // Display each product in the cart with remove button
-                    echo "<img src='".$row["img_src"]."'> ".$row["type_prod"]." <b>".$row["descrip"]."</b> £".$row["price"]." <button onclick='removeFromCart(".$row["id_prod"].")'>Remove</button><br>";
-                }
-                ?>
-            </div>
-        </div>
-        <?php include('./include/Footer.php'); ?>
-    </body>
-</html>
-=======
+<!DOCTYPE html>
+<html>
 <head>
   <title>Cars</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="Style/Cars.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/Cars.js"></script>
   <script src="js/linkedToCart.js"></script>
@@ -332,40 +251,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
   </div>
   <br>
   <center><button onclick="changeCar('American')">Next</button></center>--->
-  <footer>
-  <br>
-  <br>
-  <hr>
-  <table id="mytable">
-    <tr>
-      <th><a href="Buy.html">Buy</a></th>
-      <th><a href="Seller.html">Sell</a></th>
-      <th><a href="Community.html">Community</a></th>
-      <th><a href="aboutus.html">About us</a></th>
-    </tr>
-    <tr>
-      <td><a href="fff">Buy it now</a></td>
-      <td><a href="fff">Seller protection</a></td>
-      <td><a href="fff">Groups</a></td>
-      <td><a href="fff">Legal Imprint</a></td>
-    </tr>
-    <tr>
-      <td><a href="fihfi"> Bid</a></td>
-      <td><a href="fff">Sell cars</a></td>
-      <td><a href="fff">News</a></td>
-      <td><a href="fff">Legal Notices</a></td>
-    </tr>
-    <tr>
-      <td><a href="fff">Black fridays offers</td>
-      <td><a href="fff">Sell estates</a></td>
-    </tr>
-
-
-  </table><br>
-  <hr>
-
-<center><div id="footer">Copyright &copy; Grandeur Estates & Cars<br>       <a href="Grandeur.estates&cars@gmail.com">Grandeur.estates&cars@gmail.com</a>   </div></center> 
-</footer>
+  <?php include('./include/Footer.php'); ?>
 </body>
 </html>
->>>>>>> 41ca7a4e8842d37c111f71b640fdec6c2b33a232
