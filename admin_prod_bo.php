@@ -6,6 +6,46 @@
 		<title>Grandeur Estates & Cars : Admin product buy it now</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="js/prodDelete_check.js"></script>
+        <style>
+            body {
+	background-color: #785d4d;
+	color: #eed9c4;
+}
+        .product-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #eed9c4;
+            color: #785d4d;
+            margin-bottom: 10px;
+        }
+
+        .product-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .product-item button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #785d4d;
+            color: #eed9c4;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .product-item button:hover {
+            background-color: #eed9c4;
+            color: #785d4d;
+        }
+        </style>
+
 	</head>
 	<body>
         <?php
@@ -28,7 +68,7 @@
 		mysqli_close($conn);
 
         while ($row = mysqli_fetch_array($res)) {
-            echo "<div id=".$row["id_prod"]."><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].",3)'>Delete</button></div>";
+            echo "<div class='product-item' id=".$row["id_prod"]."><img src='".$row["img_src"]."'> <b>".$row["descrip"]."</b> £".$row["seller_price"]." sell by : ".$row["username"]." <button onclick='checkDel(".$row["id_prod"].",3)'>Delete</button></div>";
         }
         ?>
         <span id="del"></span>
