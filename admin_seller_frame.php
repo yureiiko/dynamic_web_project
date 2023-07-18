@@ -38,6 +38,7 @@
 	</head>
 	<body>
         <?php
+		// Check if admin cookie is set, if not redirect to login page
 		if (!isset($_COOKIE["admin"])) {
 			header("Location: login.php");
 		}

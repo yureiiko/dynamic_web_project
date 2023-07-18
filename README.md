@@ -5,9 +5,10 @@
 - [X] homepage : 06/07
 - [X] login : 07/07
 - [X] sign up : 06/07
-- [ ] find images : 06/07
+- [X] find images : 06/07
 - [X] all admin pages : 10/07
 - [ ] all buyer and seller main pages : 15/07
+- [ ] payement page
 
 ## Back
 
@@ -31,5 +32,9 @@
 - [X] seller add product : 13/07
 - [X] products.php : 17/07
 - [X] Cars.php : 17/07
-- [ ] buyer login : 17/07
-- [ ] Cart creation : 17/07
+- [X] buyer login : 17/07
+- [X] Cart creation : 17/07
+- [X] BIN in Cart : 17/07
+- [ ] Auction fonctionnal : 18/07
+- [ ] Auction in Cart : 19/07
+- [ ] link buyer's pages : 18/07

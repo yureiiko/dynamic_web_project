@@ -1,61 +1,75 @@
-<?php
-if (isset($_COOKIE["seller"])) {
-    if (isset($_POST["prod_type"]) && isset($_FILES["prod_img"]) && isset($_POST["descrip"]) && isset($_POST["sale"]) && isset($_POST["price"])) {
-        $usr = "root";
-        $password = "";
-        $database = "dynamic_web_project";
-        $conn = new mysqli("localhost", $usr, $password, $database);
-        if ($conn->connect_error) {
-            echo "db error <br>";
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Grandeur Estates & Cars : Seller Add Prod Specifications Page</title>
+        <link rel="stylesheet" href="Style/styleUserMain.css">
+        <script type="text/javascript" src="js/frameRev.js"></script>
+    </head>
+    <body>
+        <?php
+        // Check if seller cookie is set, if not redirect to login page
+        if (!isset($_COOKIE['seller'])) {
+            header("Location: login.php");
         }
-        $query1 = "insert into product(descrip, type_prod, id_seller) values('".$_POST["descrip"]."','".$_POST["prod_type"]."','".$_COOKIE["seller"]."')";
-        if (!mysqli_query($conn, $query1)) {
-            echo "database problem";
-        }
-        $maxid = getNewProdId();
-        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].$maxid;
-        $tmpFile = $_FILES["prod_img"]["tmp_name"];
-        move_uploaded_file($tmpFile, $uploadfile);
-        $query_file = "update product set img_src='".$uploadfile."' where id_prod=".$maxid;
-        mysqli_query($conn, $query_file);
-        switch ($_POST["sale"]) {
-            case 'BIN':
-                $query2 = "insert into BIN(price, id_prod) values(".$_POST["price"].",".$maxid.")";
-                break;
-            case 'best_offer':
-                $query2 = "insert into best_offer(seller_price, id_prod) values(".$_POST["price"].",".$maxid.")";
-                break;
-            case 'auction':
-                $query2 = "insert into auction(deadline, id_prod) values('".date("Y")."-".(date("m")+1)."-".date("d")."',".$maxid.")";
-                break;
-            default:
-                $query2 = "";
-                break;
-        }
-        if (mysqli_query($conn, $query2)) {
-            header("Location: seller_addProd_frame.php");
-        } else {
-            echo "database problem";
-        }
-    } else {
-        header("Location: seller_addProd_frame.php");
-    }
-} else {
-    header("Location: login.php");
-}
-
-//Return the max id of product in the database
-function getNewProdId() {
-    $usr = "root";
-    $password = "";
-    $database = "dynamic_web_project";
-    $conn = new mysqli("localhost", $usr, $password, $database);
-    if ($conn->connect_error) {
-        echo "db error <br>";
-    }
-    $query = "select max(id_prod) from product";
-    $res = mysqli_query($conn, $query);
-    $row = mysqli_fetch_array($res);
-    return $row["max(id_prod)"];
-}
-?>
+        ?>
+        <h1>You will now add Specifications about the product</h1>
+        <form action="addProd.php" method="POST" enctype="multipart/form-data">
+            <label for="prod_type">What is the type of your product : </label>
+            <select name="prod_type" id="prod_type">
+                <!-- Product type options -->
+                <option value="suv">SUV</option>
+                <option value="sportcar">Sport car</option>
+                <option value="convertible">Convertible</option>
+                <option value="coupe">Coupe</option>
+                <option value="grandtourner">Grand Tourner</option>
+                <option value="americancar">American Car</option>
+                <option value="castle">Castle</option>
+                <option value="mansion">Mansion</option>
+                <option value="villa">Villa</option>
+                <option value="apartment">Apartment</option>
+                <option value="island">Island</option>
+                <option value="penthouse">Penthouse</option>
+                <option value="chalet">Chalet</option>
+                <option value="bungalow">Bungalow</option>
+            </select>
+            <br><br>
+            <label for="prod_img">Upload an image of your product : </label>
+            <input type="file" name="prod_img" accept="image/png, image/jpeg">
+            <br><br>
+            <label for="descrip">Give a description of your product : </label>
+            <input type="text" name="descrip">
+            <br><br>
+            <?php
+            // Check if 'saling' is set from a POST request
+            if (isset($_POST['saling'])) {
+                switch ($_POST["saling"]) {
+                    case 'bin':
+                        // If 'saling' is 'bin', display input for fixed price
+                        echo "<label for='price'>Give your price (it will not change) : </label><input type='number' name='price'><br><br>";
+                        echo "<input type='hidden' name='sale' value='BIN'>";
+                        break;
+                    case 'bo':
+                        // If 'saling' is 'bo', display input for negotiable price
+                        echo "<label for='price'>Give your price (you will negotiate it) : </label><input type='number' name='price'><br><br>";
+                        echo "<input type='hidden' name='sale' value='best_offer'>";
+                        break;
+                    case 'auc':
+                        // If 'saling' is 'auc', set price to 0 and specify auction sale type
+                        echo "<input type='hidden' name='price' value='0'>";
+                        echo "<input type='hidden' name='sale' value='auction'>";
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                echo "<br>no sale post<br>";
+                // Redirect to seller_addProd_frame.php if 'saling' is not set
+                // header("Location: seller_addProd_frame.php");
+            }
+            ?>
+            <input type="submit" value="Add Product">
+        </form>
+    </body>
+</html>
