@@ -1,6 +1,6 @@
 <?php
 if (!isset($_COOKIE["seller"])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 if (!isset($_POST["idProd"]) || !isset($_POST["idBuyer"]) || !isset($_POST["maxPrice"])) {
     header("Location: seller_prod_auc.php");

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Payment Form</title>
-	<link rel="stylesheet" type="text/css" href="Style/payement.css">
+	<link rel="stylesheet" type="text/css" href="../Style/payement.css">
 	<script src="js/payement.js"></script>
 </head>
 <body>
@@ -47,7 +47,7 @@
 			<label for="total_amount">Total Amount:
 				<?php
 				if (!isset($_COOKIE["buyer"])) {
-					header("Location: login.php");
+					header("Location: ../login.php");
 				}
 				if (!isset($_POST["totalPrice"]) || !isset($_POST["ids"])) {
 					header("Location: buyer_cart.php");
@@ -71,7 +71,7 @@
 			<div class="section" id="paypal-form">
 				<h3 class="section-title">PayPal Payment</h3>
 				<div class="payment-image">
-					<img src="style/img/paypal_logo.png" alt="PayPal Logo">
+					<img src="../style/img/paypal_logo.png" alt="PayPal Logo">
 				</div>
 				<label for="paypal_email">PayPal Email:</label>
 				<input type="email" id="paypal_email" name="paypal_email" placeholder="PayPal Email">
@@ -81,7 +81,7 @@
 			<div class="section" id="card-form">
 				<h3 class="section-title">Credit/Debit Card Payment</h3>
 				<div class="payment-image">
-					<img src="style/img/card_logo.png" alt="Card Logo">
+					<img src="../style/img/card_logo.png" alt="Card Logo">
 				</div>
 				<label for="card_number">Card Number:</label>
 				<input type="text" id="card_number" name="card_number" placeholder="Card Number" required>

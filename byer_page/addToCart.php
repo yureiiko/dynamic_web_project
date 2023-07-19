@@ -21,6 +21,10 @@ if (isset($_COOKIE["buyer"])) {
             mysqli_close($conn);
             echo "Database problem";
         }
+    } else {
+        header("Location: products.php");
     }
+} else {
+    header("Location: ../login.php");
 }
 ?>

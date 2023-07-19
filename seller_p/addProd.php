@@ -13,7 +13,7 @@ if (isset($_COOKIE["seller"])) {
             echo "database problem";
         }
         $maxid = getNewProdId();
-        $uploadfile = "Style/img/prod_img/".$_POST["prod_type"].$maxid;
+        $uploadfile = "../Style/img/prod_img/".$_POST["prod_type"].$maxid;
         $tmpFile = $_FILES["prod_img"]["tmp_name"];
         move_uploaded_file($tmpFile, $uploadfile);
         $query_file = "update product set img_src='".$uploadfile."' where id_prod=".$maxid;
@@ -41,7 +41,7 @@ if (isset($_COOKIE["seller"])) {
         header("Location: seller_addProd_frame.php");
     }
 } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 
 //Return the max id of product in the database

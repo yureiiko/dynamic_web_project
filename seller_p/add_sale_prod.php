@@ -11,7 +11,7 @@
         <?php
         // Check if seller cookie is set, if not redirect to login page
         if (!isset($_COOKIE['seller'])) {
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
         ?>
         <h1>You will now add Specifications about the product</h1>

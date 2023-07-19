@@ -93,7 +93,7 @@
                     <ul>
                         <!--<li><a href="link_bs.php">Profile</a></li>
                         <li><a href="passwordchange.php">Change Password</a></li>-->
-                        <form action="../logout.php" method="POST">
+                        <form action="logout.php" method="POST">
                             <input type="hidden" name="usrtype" value="buyer">
                             <input type="submit" value="Log out">
                         </form>

@@ -60,8 +60,7 @@
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
-        $port = 3308; // Assuming a specific port is used
-        $conn = new mysqli("localhost", $usr, $password, $database, $port);
+        $conn = new mysqli("localhost", $usr, $password, $database,);
         
         // Check if the connection was successful
         if ($conn->connect_error) {

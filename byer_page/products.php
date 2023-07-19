@@ -49,43 +49,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/castle1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Castle1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/catle2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Castle2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/castle3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Castle3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-      <br>
-</div>
-</div>--->
 </div>
 <br>
 <center><h2><a name="Mansions">Mansions</h2></center>
@@ -111,42 +74,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Mansion1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Mansion1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Mansion2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Mansion1</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Mansion3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Mansion1</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -171,42 +98,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Villas1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Villa1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Villa2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Villa2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Villa3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Villa3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -232,42 +123,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Apartment1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Apartment1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Apartment2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Apartment2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Apartment3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Apartment3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <<button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -292,42 +147,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Island1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Island1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Island2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Island2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Island3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Island3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -352,42 +171,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Penthouse1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Penthouse1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Penthouse2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Penthouse2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Penthouse3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Penthouse3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -412,42 +195,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Chalet1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Chalet1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Chalet2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Chalet2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Penthouse3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Chalet3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 
@@ -472,42 +219,6 @@ $conn = new mysqli("localhost", $usr, $password, $database);
     </div>";
   }
   ?>
-  <!---<div class="conteneur">
-    <div class="card">
-      <img src="style/img/Bungalow1.jpg" alt=""><br>
-      <center><div class="description">
-        <b>Bungalow1</b><br>
-        <p id="total-amount"> Price: £240.005.600</p>
-        <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Bungalow2.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Bungalow2</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center>
-    </div>
-  </div>
-  <div class="conteneur">
-    <div class="card">
-      <img src="style/img/Bungalow3.jpg" alt=""><br>
-      <center><div class="description">
-      <b>Bungalow3</b><br>
-      <p id="total-amount"> Price: £240.005.600</p>
-      <button type="button">Buy now</button>
-        <button type="button">Add</button>
-        <button type="button">Negociate</button>
-      </div></center><br>
-</div>
-</div>--->
 </div>
 <br>
 </main>

@@ -14,7 +14,6 @@
 					$usr = "root";
 					$password = "";
 					$database = "dynamic_web_project";
-					$port = 3308;
 					$conn = new mysqli("localhost", $usr, $password, $database);
 					if ($conn->connect_error) {
 					    echo "db error <br>";
@@ -58,7 +57,7 @@
 					<div class="content">
 						<h1>Grandeur Estates & Cars</h1><br>
 						<h2>Log In</h2>
-						<form action="" method="POST">
+						<form action="login.php" method="POST">
 							<br><label>Identify you're self </label><br>
 							<label>Admin</label><input type="radio" name="usrtype" value="admin">
 							<label>Buyer</label><input type="radio" name="usrtype" value="buyer">
@@ -71,7 +70,7 @@
 							<button type="submit"><span></span>Log In</button><br>
 						</form>
 						<div>
-							<p>Don't have an account? <a href="">Sign Up here</a></p>
+							<p>Don't have an account? <a href="createuser.html">Sign Up here</a></p>
 						</div>
 					</div>
 				</div>
