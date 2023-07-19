@@ -8,7 +8,7 @@
 	<body>
         <?php
 		if (!isset($_COOKIE["seller"])) {
-			header("Location: login.php");
+			header("Location: ../login.php");
 		}
 		?>
         <h4>Sales</h4>

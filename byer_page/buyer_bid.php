@@ -5,21 +5,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="Style/product.css">
+        <link rel="stylesheet" type="text/css" href="../Style/product.css">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
     <body>
         <?php
         if (!isset($_COOKIE["buyer"])) {
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
-        include("Include/Navigation.php");
+        include("../Include/NavigationP.php");
         $usr = "root";
         $password = "";
         $database = "dynamic_web_project";
         $conn = new mysqli("localhost", $usr, $password, $database);
         ?>
-        <br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
         <div>
             <h3>All current products in auction</h3>
             <?php
@@ -42,7 +42,7 @@
             ?>
         </div>
         <?php
-        include("Include/Footer.php");
+        include("../Include/Footer.php");
         ?>
     </body>
 </html>

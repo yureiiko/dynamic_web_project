@@ -4,18 +4,18 @@
         <title>Cart</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="Style/Cars.css">
+        <link rel="stylesheet" type="text/css" href="../Style/Cars.css">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/linkedToCart.js"></script>
+        <script src="../js/linkedToCart.js"></script>
     </head>
     <body>
-      <?php include("Include/Navigation.php"); ?>
+      <?php include("../Include/NavigationP.php"); ?>
         <br><br><br><br><br><br>
         
         <?php
         // Check if buyer cookie is set, if not redirect to login page
         if (!isset($_COOKIE["buyer"])) {
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
         
         // Connect to the database
@@ -58,7 +58,7 @@
                 ?>
             </div>
         </div>
-        <form action="payement.php" method="POST">
+        <form action="../payement.php" method="POST">
             <?php
             for ($i=0 ; $i < sizeof($prod_ids) ; $i++ ) { 
                 echo "<input type='hidden' id='ids[".$i."]' name='ids[]' value=".$prod_ids[$i].">";

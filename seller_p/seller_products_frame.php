@@ -4,13 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin product frame</title>
-		<link rel="stylesheet" href="Style/styleProdFrame.css">
-		<script type="text/javascript" src="js/frameRev.js"></script>
+		<link rel="stylesheet" href="../Style/styleProdFrame.css">
+		<script type="text/javascript" src="../js/frameRev.js"></script>
 	</head>
 	<body>
 		<?php
 		if (!isset($_COOKIE["seller"])) {
-			header("Location: login.php");
+			header("Location: ../login.php");
 		}
 		?>
         <h4>Product Frame</h4>

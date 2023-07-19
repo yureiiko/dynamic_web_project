@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style/myaccount.css">
+    <link rel="stylesheet" type="text/css" href="../style/myaccount.css">
     <title></title>
 </head>
 <body>
     <div class="banner">
         <?php
-        include('./include/Navigation.php');
+        include('../include/NavigationP.php');
         ?>
     </div>
   <main>
     <?php
     if (!isset($_COOKIE["buyer"])) {
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
     $usr = "root";
     $password = "";
@@ -29,7 +29,7 @@
             <div class="personal-info">
                 <h2>User Information</h2>
                 <div class="profile-picture">
-                    <img src="style/img/default-profile.png" alt="Profile Picture">
+                    <img src="../style/img/default-profile.png" alt="Profile Picture">
                     <input type="file" id="profile-picture-upload" accept="image/*">
                 </div>
                 <p>Name: <?php echo $row["username"] ?></p>
@@ -90,7 +90,7 @@
                     <ul>
                         <!--<li><a href="link_bs.php">Profile</a></li>
                         <li><a href="passwordchange.php">Change Password</a></li>-->
-                        <form action="logout.php" method="POST">
+                        <form action="../logout.php" method="POST">
                             <input type="hidden" name="usrtype" value="buyer">
                             <input type="submit" value="Log out">
                         </form>
@@ -100,7 +100,7 @@
         </section>
     </main>
     <?php
-    include('./include/Footer.php');
+    include('../include/Footer.php');
 ?>
 </body>
 </html>

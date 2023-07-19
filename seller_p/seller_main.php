@@ -4,16 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Seller Main Page</title>
-		<link rel="stylesheet" href="Style/styleUserMain.css">
-		<script type="text/javascript" src="js/frameRev.js"></script>
+		<link rel="stylesheet" href="../Style/styleUserMain.css">
+		<script type="text/javascript" src="../js/frameRev.js"></script>
 	</head>
 	<body>
         <?php
         if (!isset($_COOKIE['seller'])) {
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
         ?>
-		<form action="logout.php" method="POST">
+		<form action="../logout.php" method="POST">
 			<input type="hidden" name="usrtype" value="seller">
 			<input type="submit" value="Log out">
 		</form>

@@ -4,13 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Seller Add Prod Page</title>
-		<link rel="stylesheet" href="Style/styleUserMain.css">
-		<script type="text/javascript" src="js/frameRev.js"></script>
+		<link rel="stylesheet" href="../Style/styleUserMain.css">
+		<script type="text/javascript" src="../js/frameRev.js"></script>
 	</head>
 	<body>
         <?php
         if (!isset($_COOKIE['seller'])) {
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
         ?>
         <h1>Product Add Frame</h1>
