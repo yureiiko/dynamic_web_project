@@ -5,13 +5,20 @@ if (isset($_POST["usrtype"])) {
             if (isset($_COOKIE["admin"])) {
                 setcookie("admin", "", time()-3600);
                 unset($_COOKIE["admin"]);
-                header("Location: login.php");
+                header("Location: ../index.php");
             }
             break;
         case 'seller':
             if (isset($_COOKIE["seller"])) {
                 setcookie("seller", "", time()-3600);
                 unset($_COOKIE["seller"]);
+                header("Location: ../index.php");
+            }
+            break;
+        case 'buyer':
+            if (isset($_COOKIE["buyer"])) {
+                setcookie("buyer", "", time()-3600);
+                unset($_COOKIE["buyer"]);
                 header("Location: login.php");
             }
             break;
@@ -23,7 +30,7 @@ if (isset($_POST["usrtype"])) {
             }
             break;
         default:
-            header("Location: login.php");
+            header("Location: ../index.php");
             break;
     }
 }

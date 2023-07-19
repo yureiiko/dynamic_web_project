@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin product buy it now</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="js/prodDelete_check.js"></script>
+        <script type="text/javascript" src="../js/prodDelete_check.js"></script>
         <style>
         body {
 	background-color: #785d4d;
@@ -51,7 +51,7 @@
         <?php
 		// Check if admin cookie is set, if not redirect to login page
 		if (!isset($_COOKIE["admin"])) {
-			header("Location: login.php");
+			header("Location: ../Login_logout/login.php");
 		}
 		?>
         <h4>Product auction</h4>

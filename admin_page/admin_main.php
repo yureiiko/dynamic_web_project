@@ -4,22 +4,22 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin Main Page</title>
-		<link rel="stylesheet" href="Style/styleUserMain.css">
-		<script type="text/javascript" src="js/frameRev.js"></script>
+		<link rel="stylesheet" href="../Style/styleUserMain.css">
+		<script type="text/javascript" src="../js/frameRev.js"></script>
 	</head>
 	<body>
 		<?php
 		// Check if admin cookie is set, if not redirect to login page
 		if (!isset($_COOKIE["admin"])) {
-			header("Location: login.php");
+			header("Location: ../Login_logout/login.php");
 		}
 		?>
-		<form action="logout.php" method="POST">
+		<form action="../Login_logout/logout.php" method="POST">
 			<input type="hidden" name="usrtype" value="admin">
 			<input type="submit" value="Log out" class="logout-btn">
 		</form>
-		<a href="index.php">
-		<img src="Style/img/GEC (2).png" class="logo" width="550" height="50">
+		<a href="../index.php">
+		<img src="../Style/img/GEC (2).png" class="logo" width="550" height="50">
 		</a>
 		<h1>Welcome Admin</h1>
 		<div class="der">

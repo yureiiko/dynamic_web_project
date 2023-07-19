@@ -4,6 +4,42 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin seller frame</title>
+        <style>
+            body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #eed9c4;
+}
+
+h4 {
+	text-align: center;
+	margin: 20px 0;
+	color: #785d4d;
+}
+
+div {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #eed9c4;
+	color: #785d4d;
+	margin-bottom: 10px;
+}
+
+div img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+#del {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+</style>
 	</head>
 	<body>
         <?php
