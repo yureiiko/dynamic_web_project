@@ -2,18 +2,18 @@
 <html>
 <head>
 	<title>About Us</title>
-	<link rel="stylesheet" type="text/css" href="style5.css">
+	<link rel="stylesheet" type="text/css" href="../Style/style5.css">
 </head>
 <body>
 	<!-- Inclusion du menu de navigation -->
 	<div class="menu-overlay">
 		<!-- Inclusion du menu de navigation -->
-		<?php include('./include/Navigation.php'); ?>
+		<?php include('../Include/NavigationP.php'); ?>
 	</div>
 
 	<div class="hero-section">
 		<video autoplay loop muted class="background-video">
-			<source src="./img/video1.mp4" type="video/mp4">
+			<source src="../vid/video1.mp4" type="video/mp4">
 		</video>
 		<div class="hero-content">
 			<h1>Welcome to our site</h1>
@@ -31,7 +31,7 @@
 
 		<section class="unparalled">
 			<center>
-				<img src="./Style/img/car1.jpg" height="800px" width="1400px"><br>
+				<img src="../Style/img/car1.jpg" height="800px" width="1400px"><br>
 			</center>
 		</section>
 		<section>
@@ -54,7 +54,7 @@
 		</section>
 		<section>
 			<div>
-				<img src="./Style/img/housebanner1.jpg" height="430px" width="400px" style="position: absolute; top: 1950px; left: 900px;">
+				<img src="../Style/img/housebanner1.jpg" height="430px" width="400px" style="position: absolute; top: 1950px; left: 900px;">
 			</div>
 		</section>
 
@@ -82,7 +82,7 @@
 	</div>
 
 	<!-- Inclusion du footer -->
-	<?php include('./include/Footer.php'); ?>
+	<?php include('../include/Footer.php'); ?>
 
 </body>
 </html>

@@ -14,7 +14,7 @@
 			header("Location: ../login.php");
 		}
 		?>
-		<form action="logout.php" method="POST">
+		<form action="../logout.php" method="POST">
 			<input type="hidden" name="usrtype" value="admin">
 			<input type="submit" value="Log out" class="logout-btn">
 		</form>

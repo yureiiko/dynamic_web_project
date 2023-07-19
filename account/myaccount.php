@@ -25,7 +25,10 @@
     $res = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($res);
     ?>
+     <br>
+     <br>
         <section class="my-account">
+           
             <div class="personal-info">
                 <h2>User Information</h2>
                 <div class="profile-picture">

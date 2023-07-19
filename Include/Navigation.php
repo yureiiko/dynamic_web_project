@@ -42,6 +42,6 @@
     <li><a href="admin_p/admin_main.php">admin</a></li>
     <li><a href="seller_p/seller_main.php">seller</a></li>
     <li><a href="account/myaccount.php"><i class='fas fa-user-circle'></i></a></li>
-    <li><a href="about.php">About Us</a></li>
+    <li><a href="account/about.php">About Us</a></li>
   </ul>
 </nav>
