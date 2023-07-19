@@ -19,8 +19,8 @@
 				<h1>Grandeur Estates & Cars</h1>
 				<p><b>Unleash Your Luxe Lifestyle</b></p>
 				<div>
-					<a href="su.html"><button type="button"><span></span>Sign up</button></a>
-					<a href="LI.html"><button type="button"><span></span>Log in</button></a>
+					<a href="createUser.html"><button type="button"><span></span>Sign up</button></a>
+					<a href="login.php"><button type="button"><span></span>Log in</button></a>
 				</div>
 			</div>
 
