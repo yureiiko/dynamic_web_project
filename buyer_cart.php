@@ -9,44 +9,7 @@
         <script src="js/linkedToCart.js"></script>
     </head>
     <body>
-      <nav>
-  <img src="Style/img/GEC (2).png" class="style/img/logo" width="550" height="50">
-  <!--<h1>LOGO</h1>-->
-  <ul class="main-menu">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="products.php">Estates</a>
-      <ul class="sub-menu">
-        <li><a href="#Castles" target="blank">Castles</a></li>
-        <li><a href="#Mansions" target="blank">Mansions</a></li>
-        <li><a href="#Villas" target="blank">Villas</a></li>
-        <li><a href="#Apartments" target="blank">Apartments</a></li>
-        <li><a href="#Islands" target="blank">Islands</a></li>
-        <li><a href="#Penthouses" target="blank">Penthouses</a></li>
-        <li><a href="#Chalets" target="blank">Chalets</a></li>
-        <li><a href="#Bungalows" target="blank">Bungalows</a></li>
-      </ul>
-    </li>
-    <li><a href="Cars.php">Cars</a>
-      <ul class="sub-menu">
-        <li><a href="Cars.php#SUV">SUV</a></li>
-        <li><a href="Cars.php#Sports car">Sports cars</a></li>
-        <li><a href="Cars.php#Convertible">Convertible</a></li>
-        <li><a href="Cars.php#Coupe">Coupe</a></li>
-        <li><a href="Cars.php#Grand Tourer">Grand Tourer</a></li>
-        <li><a href="Cars.php#American Cars">American cars</a></li>
-      </ul>
-    </li>
-    <li><a href="">Special Offers</a> 
-      <ul class="sub-menu">
-        <li><a href="">Best Offers</a></li>
-        <li><a href="">Bids</a></li>
-      </ul>
-    </li>
-    <li><a href="buyer_cart.php">Cart</a></li>
-    <li><a href="myaccount.php"><i class='fas fa-user-circle'></i></a></li>
-    <li><a href="about.php">About Us</a></li>
-  </ul>
-</nav>
+      <?php include("Include/Navigation.php"); ?>
         <br><br><br><br><br><br>
         
         <?php
@@ -67,6 +30,22 @@
                 <?php
                 // Query to retrieve products in the cart for buy it now
                 $query = "select p.id_prod, p.img_src, p.descrip, p.type_prod, b.price from product p, BIN b where p.id_prod=b.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].")";
+                $res = mysqli_query($conn, $query);
+                $total = 0;
+                $prod_ids=array();
+                while ($row=mysqli_fetch_array($res)) {
+                    // Display each product in the cart with remove button
+                    $prod_ids[]=$row["id_prod"];
+                    echo "<img src='".$row["img_src"]."'> ".$row["type_prod"]." <b>".$row["descrip"]."</b> £<span id='price'>".$row["price"]."</span> <button onclick='removeFromCart(".$row["id_prod"].")'>Remove</button><br>";
+                    $total = $total+$row["price"];
+                }
+                ?>
+            </div>
+            <div class="auc">
+                <h4>Auction</h4>
+                <?php
+                // Query to retrieve products in the cart for buy it now
+                $query = "select p.id_prod, p.img_src, p.descrip, p.type_prod, a.price from product p, auction a where p.id_prod=a.id_prod and p.id_prod not in (select id_prod from sales) and p.id_prod in (select id_prod from cart where id_buyer=".$_COOKIE["buyer"].")";
                 $res = mysqli_query($conn, $query);
                 $total = 0;
                 $prod_ids=array();
