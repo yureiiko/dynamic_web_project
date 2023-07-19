@@ -82,7 +82,7 @@
         <form action="payement.php" method="POST">
             <?php
             for ($i=0 ; $i < sizeof($prod_ids) ; $i++ ) { 
-                echo "<input type='hidden' id='ids[".$i."]' name='ids' value=".$prod_ids[$i].">";
+                echo "<input type='hidden' id='ids[".$i."]' name='ids[]' value=".$prod_ids[$i].">";
             }
             ?>
             <input type="hidden" name="totalPrice" id="totalPrice" value="<?php echo $total;?>">

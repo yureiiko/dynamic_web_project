@@ -93,7 +93,14 @@
 				<input type="text" id="cvv" name="cvv" placeholder="CVV" required>
 			</div>
 		</div>
-
+		<?php
+		$allIds=$_POST["ids"];
+		$i=0;
+        foreach ($allIds as $id) {
+            echo "<input type='hidden' id='ids[".$i."]' name='ids[]' value=".$id.">";
+			$i++;
+        }
+        ?>
 		<input type="submit" value="Pay">
 		</form>
 	</body>
