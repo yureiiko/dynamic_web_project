@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin seller frame</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="../js/userDelete_check.js"></script>
+        <script type="text/javascript" src="js/userDelete_check.js"></script>
         <style>
 
         .seller-item {

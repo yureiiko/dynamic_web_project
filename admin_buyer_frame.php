@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grandeur Estates & Cars : Admin buyer frame</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src="../js/userDelete_check.js"></script>
+        <script type="text/javascript" src="js/userDelete_check.js"></script>
         
         <style>
 
@@ -41,7 +41,7 @@
         <?php
         // Check if admin cookie is set, if not redirect to login page
 		if (!isset($_COOKIE["admin"])) {
-			header("Location: ../Login_logout/login.php");
+			header("Location: login.php");
 		}
 		?>
         <h4>Buyer Frame</h4>
