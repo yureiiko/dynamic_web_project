@@ -19,18 +19,8 @@
 				<h1>Grandeur Estates & Cars</h1>
 				<p><b>Unleash Your Luxe Lifestyle</b></p>
 				<div>
-<<<<<<< Updated upstream
 					<a href="createUser.html"><button type="button"><span></span>Sign up</button></a>
 					<a href="login.php"><button type="button"><span></span>Log in</button></a>
-=======
-<<<<<<< HEAD
-					<a href="./create/su.html"><button type="button"><span></span>Sign up</button></a>
-					<a href="./Login_logout/login.php"><button type="button"><span></span>Log in</button></a>
-=======
-					<a href="createUser.html"><button type="button"><span></span>Sign up</button></a>
-					<a href="login.php"><button type="button"><span></span>Log in</button></a>
->>>>>>> c8b38e2557069445d41c5a38b638c766b307c3b6
->>>>>>> Stashed changes
 				</div>
 			</div>
 
@@ -50,7 +40,7 @@
 			<div>
 				<a href="buyer.html"><button type="button"><span></span>Start</button></a>
 			</div>-->
-			<a href="./byer_page/buyer.html"><button type="button"><span></span>Start</button></a>
+			<a href="buyer.html"><button type="button"><span></span>Start</button></a>
 		</div>
 	</center>
 </section>
