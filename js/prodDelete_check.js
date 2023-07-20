@@ -7,7 +7,7 @@ function noDel() {
 function yesDel(id, table) {
     jQuery.ajax({
         type: "POST",
-        url: "deleteprod.php",
+        url: "../admin/deleteprod.php",
         dataType: "json",
         data: {prodid: id, table: table},
         complete:function(obj, textstatus) {
